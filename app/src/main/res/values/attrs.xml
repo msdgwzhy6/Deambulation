@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="qucikRunTheme" format="color" />
+    <attr name="qucikRunStatus" format="color"/>
+    <attr name="qucikRunColorAccent" format="color"/>
+    <attr name="qucikRunBackground" format="color" />
+    <attr name="qucikRunViewBackground" format="color" />
+    <attr name="qucikRunDrawerBackground" format="color" />
+    <attr name="qucikRunFloatBtn" format="color" />
+    <attr name="qucikRunToolbarText" format="color" />
+
+    <declare-styleable name="SettingItemView">
+        <attr name="icon" format="reference" />
+        <attr name="title" format="string" />
+        <attr name="description" format="string" />
+        <attr name="type" format="enum">
+            <enum name="none" value="0" />
+            <enum name="switcher" value="1" />
+            <enum name="checkbox" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
