@@ -1,4 +1,4 @@
-package com.ym.quickRun.model.app;
+package com.ym.quickrun.model.app;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -11,8 +11,8 @@ import android.view.animation.BounceInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 
-import com.ym.quickRun.R;
-import com.ym.quickRun.base.BaseActivity;
+import com.ym.quickrun.R;
+import com.ym.quickrun.base.BaseActivity;
 
 import java.util.concurrent.TimeUnit;
 
@@ -65,15 +65,16 @@ public class StartActivity extends BaseActivity {
         nameAnim.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
-                Observable.timer(500, TimeUnit.MILLISECONDS).subscribe(aLong -> {
-                   startActivity(new Intent(StartActivity.this,MainActivity.class));
-                   finish();
-                });
+                Observable.timer(500, TimeUnit.MILLISECONDS).subscribe(aLong -> go2Main());
             }
         });
 
         AnimatorSet animSet = new AnimatorSet();
         animSet.play(alphaAnim).with(desAnim).before(nameAnim);
         animSet.start();
+    }
+    private void go2Main() {
+        startActivity(new Intent(StartActivity.this,MainActivity.class));
+        finish();
     }
 }

@@ -1,4 +1,4 @@
-package com.ym.quickRun.model.app;
+package com.ym.quickrun.model.app;
 
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
@@ -8,8 +8,8 @@ import android.hardware.SensorManager;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.ym.quickRun.R;
-import com.ym.quickRun.base.BaseActivity;
+import com.ym.quickrun.R;
+import com.ym.quickrun.base.BaseActivity;
 
 import butterknife.BindView;
 

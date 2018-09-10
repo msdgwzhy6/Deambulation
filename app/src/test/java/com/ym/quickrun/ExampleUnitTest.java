@@ -1,4 +1,4 @@
-package com.ym.quickRun;
+package com.ym.quickrun;
 
 import org.junit.Test;
 

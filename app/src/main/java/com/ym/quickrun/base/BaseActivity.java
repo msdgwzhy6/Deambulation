@@ -1,4 +1,4 @@
-package com.ym.quickRun.base;
+package com.ym.quickrun.base;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
