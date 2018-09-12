@@ -1,4 +1,4 @@
-package com.ym.quickrun.network;
+package com.ym.quickrun.network.helper;
 
 import java.util.concurrent.TimeUnit;
 
