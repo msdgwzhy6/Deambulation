@@ -112,15 +112,15 @@
 -keep public class * extends android.os.IInterface
 
 #v4,v7,v13包
-        -keep class android.support.v4.** { *; }
-        -keep interface android.support.v4.app.** { *; }
-        -keep class android.support.v7.** { *; }
-        -keep interface android.support.v7.app.** { *; }
-        -keep class android.support.v13.** { *; }
-        -keep interface android.support.v13.app.** { *; }
-        -dontwarn android.support.**
-        -dontwarn javax.annotation.**
-        -dontwarn javax.inject.**
+-keep class android.support.v4.** { *; }
+-keep interface android.support.v4.app.** { *; }
+-keep class android.support.v7.** { *; }
+-keep interface android.support.v7.app.** { *; }
+-keep class android.support.v13.** { *; }
+-keep interface android.support.v13.app.** { *; }
+-dontwarn android.support.**
+-dontwarn javax.annotation.**
+-dontwarn javax.inject.**
 
 # OkHttp3
 -dontwarn okhttp3.logging.**
@@ -144,25 +144,25 @@
     rx.internal.util.atomic.LinkedQueueNode consumerNode;
 }
  #bugly
-        -dontwarn com.tencent.bugly.**
-        -keep public class com.tencent.bugly.**{*;}
-        -keep class android.support.**{*;}
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+-keep class android.support.**{*;}
 
-     # If you do not use RxJava:
-     -dontwarn rx.**
+# If you do not use RxJava:
+-dontwarn rx.**
 
-     # support-v7-appcompat
-     -keep public class android.support.v7.widget.** { *; }
-     -keep public class android.support.v7.internal.widget.** { *; }
-     -keep public class android.support.v7.internal.view.menu.** { *; }
-     -keep public class * extends android.support.v4.view.ActionProvider {
-         public <init>(android.content.Context);
-     }
-     # support-design
-     -dontwarn android.support.design.**
-     -keep class android.support.design.** { *; }
-     -keep interface android.support.design.** { *; }
-     -keep public class android.support.design.R$* { *; }
+# support-v7-appcompat
+-keep public class android.support.v7.widget.** { *; }
+-keep public class android.support.v7.internal.widget.** { *; }
+-keep public class android.support.v7.internal.view.menu.** { *; }
+-keep public class * extends android.support.v4.view.ActionProvider {
+      public <init>(android.content.Context);
+}
+# support-design
+-dontwarn android.support.design.**
+-keep class android.support.design.** { *; }
+-keep interface android.support.design.** { *; }
+-keep public class android.support.design.R$* { *; }
 
 ################RxLifeCycle#################
 -keep class com.trello.rxlifecycle.** { *; }
@@ -184,3 +184,7 @@
 public static java.lang.String TABLENAME;
 }
 -keep class **$Properties
+
+################Bmob#################
+
+
