@@ -8,4 +8,11 @@ import android.app.Application;
  * desc:
  */
 public class QuickRunApplication extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+
+    }
 }
