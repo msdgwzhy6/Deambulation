@@ -42,9 +42,6 @@ android {
         debug {
         }
     }
-    packagingOptions {
-        exclude 'META-INF/rxjava.properties'
-    }
 
     buildTypes {
         release {

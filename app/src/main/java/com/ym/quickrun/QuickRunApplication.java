@@ -13,6 +13,5 @@ public class QuickRunApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-
     }
 }
