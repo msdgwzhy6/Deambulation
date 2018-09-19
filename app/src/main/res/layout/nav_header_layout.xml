@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp200"
+    android:background="@color/colorPrimary"
+    android:paddingStart="@dimen/dp16"
+    android:paddingTop="@dimen/dp25"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <com.ym.quickrun.view.CircleImageView
+        android:id="@+id/ic_user_icon"
+        android:layout_width="@dimen/dp74"
+        android:layout_height="@dimen/dp74"
+        android:src="@mipmap/ic_default_icon"
+        app:border_color="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/ic_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="123"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintTop_toBottomOf="@+id/ic_user_icon"/>
+
+    <ImageView
+        android:id="@+id/ic_user_grade"
+        android:layout_width="@dimen/dp36"
+        android:layout_height="@dimen/dp18"
+        android:layout_marginStart="@dimen/dp3"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/ic_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/ic_user_icon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp6"
+        android:background="@drawable/round_wihte_bg"
+        android:padding="@dimen/dp3"
+        android:text="运动积分："
+        android:textSize="@dimen/text_size_10"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/ic_user_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>
