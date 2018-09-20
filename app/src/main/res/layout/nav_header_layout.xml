@@ -54,7 +54,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp6"
-        android:padding="@dimen/dp3"
         android:text="你凝视着深渊，深渊也凝视着你"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_12"

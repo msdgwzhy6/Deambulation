@@ -18,10 +18,15 @@ import butterknife.OnClick;
 public class SplashActivity extends BaseActivity {
 
     @Override
-    protected void initWidget() {
-        super.initWidget();
+    protected int getLayoutId() {
         // 隐藏标题栏
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        return R.layout.activity_start;
+    }
+
+    @Override
+    protected void initWidget() {
+        super.initWidget();
         // 隐藏状态栏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -29,10 +34,6 @@ public class SplashActivity extends BaseActivity {
         StatusBarUtil.setTransparent(this);
     }
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_start;
-    }
 
     private void go2Main() {
         startActivity(new Intent(SplashActivity.this, MainActivity.class));
