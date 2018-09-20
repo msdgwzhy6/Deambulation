@@ -22,34 +22,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp10"
-        android:text="123"
+        android:text=""
         android:textColor="@color/white"
-        android:textSize="@dimen/text_size_14"
+        android:textSize="@dimen/text_size_15"
         app:layout_constraintTop_toBottomOf="@+id/ic_user_icon"/>
 
     <ImageView
         android:id="@+id/ic_user_grade"
-        android:layout_width="@dimen/dp36"
-        android:layout_height="@dimen/dp18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp3"
-        android:layout_marginTop="@dimen/dp10"
-        android:gravity="center"
+        android:src="@drawable/ic_lv0_large"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_user_name"
         app:layout_constraintStart_toEndOf="@+id/ic_user_name"
-        app:layout_constraintTop_toBottomOf="@+id/ic_user_icon"/>
+        app:layout_constraintTop_toTopOf="@+id/ic_user_name"/>
 
     <TextView
+        android:id="@+id/ic_user_integral"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp6"
         android:background="@drawable/round_wihte_bg"
         android:padding="@dimen/dp3"
         android:text="运动积分："
-        android:textSize="@dimen/text_size_10"
         android:textColor="@color/white"
+        android:textSize="@dimen/text_size_10"
         app:layout_constraintTop_toBottomOf="@+id/ic_user_name"/>
 
     <TextView
+        android:id="@+id/ic_user_introduction"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp6"
+        android:padding="@dimen/dp3"
+        android:text="你凝视着深渊，深渊也凝视着你"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintTop_toBottomOf="@+id/ic_user_integral"/>
 
 </android.support.constraint.ConstraintLayout>
