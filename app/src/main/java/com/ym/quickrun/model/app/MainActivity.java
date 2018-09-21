@@ -63,7 +63,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     protected void initData() {
-       // mFragments = Collections.singletonList(HomeFragment.newInstance());
+        // mFragments = Collections.singletonList(HomeFragment.newInstance());
         //初始化位置
         switchFragmentIndex(0);
 //        stepCounterListener = new SensorEventListener() {
