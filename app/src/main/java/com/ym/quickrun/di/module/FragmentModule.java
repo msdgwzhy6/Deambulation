@@ -2,7 +2,7 @@ package com.ym.quickrun.di.module;
 
 
 import android.app.Activity;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 
 import com.ym.quickrun.di.scope.FragmentScope;
 
@@ -15,10 +15,10 @@ import dagger.Provides;
  * desc: Fragment模型
  */
 @Module
-public class FragmentMoudle {
+public class FragmentModule {
     private Fragment mFragment;
 
-    public FragmentMoudle(Fragment fragment) {
+    public FragmentModule(Fragment fragment) {
         this.mFragment = fragment;
     }
 

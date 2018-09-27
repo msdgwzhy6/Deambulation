@@ -12,6 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.trello.rxlifecycle2.components.RxFragment;
+import com.ym.quickrun.di.component.DaggerFragmentComponent;
+import com.ym.quickrun.di.component.FragmentComponent;
+import com.ym.quickrun.di.module.FragmentModule;
 
 import javax.inject.Inject;
 
@@ -139,6 +142,23 @@ public abstract class BaseFragment<T extends BaseContract.BasePresenter> extends
         mUnbinder.unbind();
     }
 
+    @Override
+    public void onDetach() {
+        this.mActivity = null;
+        super.onDetach();
+    }
+
+    protected FragmentComponent getFragmentComponent() {
+        return DaggerFragmentComponent.builder()
+                //简化每次都初始化网络控件，所以直接在入口文件注册
+                //.apiComponent()
+                .fragmentMoudle(getFragmentModule())
+                .build();
+    }
+
+    protected FragmentModule getFragmentModule() {
+        return new FragmentModule(this);
+    }
 
     /**
      * 布局文件

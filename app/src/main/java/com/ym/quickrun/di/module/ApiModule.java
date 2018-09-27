@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * desc:Api网络模型
  */
 @Module
-public class ApiMoudle {
+public class ApiModule {
     public Retrofit createRetrofit(Retrofit.Builder builder, OkHttpClient client, String baseUrl) {
         return builder
                 .baseUrl(baseUrl)

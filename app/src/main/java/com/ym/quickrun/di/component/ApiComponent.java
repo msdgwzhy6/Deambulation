@@ -1,6 +1,6 @@
 package com.ym.quickrun.di.component;
 
-import com.ym.quickrun.di.module.ApiMoudle;
+import com.ym.quickrun.di.module.ApiModule;
 import com.ym.quickrun.network.helper.RetrofitHelper;
 
 import javax.inject.Singleton;
@@ -13,7 +13,7 @@ import dagger.Component;
  * desc: ApiComponent
  */
 @Singleton
-@Component(modules = ApiMoudle.class)
+@Component(modules = ApiModule.class)
 public interface ApiComponent {
 
     RetrofitHelper getRetrofitHelper();
