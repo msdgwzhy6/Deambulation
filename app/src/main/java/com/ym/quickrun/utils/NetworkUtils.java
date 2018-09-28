@@ -26,14 +26,10 @@ public class NetworkUtils {
     public static final String NET_BROADCAST_ACTION = "com.network.state.action";
     public static final String NET_STATE_NAME = "network_state";
 
-    /**
-     * -1 为无网络连接
-     * 1 为WIFI
-     * 2 为移动网络
-     */
-    public static int CURRENT_NETWORK_STATE = -1;
-
     public enum NetType {
+        /**
+         * 当前网络状态
+         */
         None(1, "无网络连接"),
         Mobile(2, "移动网络"),
         Wifi(4, "Wifi网络"),
@@ -52,7 +48,7 @@ public class NetworkUtils {
     /**
      * 获取ConnectivityManager
      */
-    public static ConnectivityManager getConnectivityManager(Context context) {
+    private static ConnectivityManager getConnectivityManager(Context context) {
         return (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
     }
 
@@ -164,7 +160,12 @@ public class NetworkUtils {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent != null) {
-                CURRENT_NETWORK_STATE = (Integer) intent.getExtras().get(NET_STATE_NAME);
+                /*
+                  -1 为无网络连接
+                   1 为WIFI
+                   2 为移动网络
+                */
+                int CURRENT_NETWORK_STATE = intent.getIntExtra(NET_STATE_NAME,-1);
                 switch (CURRENT_NETWORK_STATE) {
                     case -1:
                         ToastUtils.showSingleLongToast("当前没有网络,请检查网络后重试！");
