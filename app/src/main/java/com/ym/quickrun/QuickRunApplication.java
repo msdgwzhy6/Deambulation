@@ -6,6 +6,7 @@ import com.ym.quickrun.di.component.ApiComponent;
 import com.ym.quickrun.di.component.DaggerApiComponent;
 import com.ym.quickrun.di.module.ApiModule;
 import com.ym.quickrun.utils.AppUtils;
+import com.ym.quickrun.utils.CrashHandler;
 import com.ym.quickrun.utils.LogUtils;
 import com.ym.quickrun.utils.NetworkUtils;
 
@@ -42,6 +43,7 @@ public class QuickRunApplication extends Application {
         initLogic();
         mContext = this;
         initComponent();
+        initCrashHandler();
 
     }
 
@@ -82,7 +84,7 @@ public class QuickRunApplication extends Application {
      * 初始化崩溃日志
      */
     private void initCrashHandler() {
-
+        CrashHandler.getInstance().init(this);
     }
 
 }
