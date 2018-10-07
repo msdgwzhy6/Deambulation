@@ -1,5 +1,6 @@
 package com.ym.quickrun;
 
+import android.app.Activity;
 import android.app.Application;
 
 import com.ym.quickrun.di.component.ApiComponent;
@@ -9,6 +10,9 @@ import com.ym.quickrun.utils.AppUtils;
 import com.ym.quickrun.utils.CrashHandler;
 import com.ym.quickrun.utils.LogUtils;
 import com.ym.quickrun.utils.NetworkUtils;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * ┏┓   ┏┓
@@ -36,6 +40,7 @@ import com.ym.quickrun.utils.NetworkUtils;
 public class QuickRunApplication extends Application {
     private static QuickRunApplication mContext;
     private ApiComponent mApiComponent;
+    private Set<Activity> mActivities;
 
     @Override
     public void onCreate() {
@@ -55,6 +60,31 @@ public class QuickRunApplication extends Application {
                 .apiMoudle(new ApiModule())
                 .build();
     }
+
+    /**
+     * 添加Activity
+     *
+     * @param activity
+     */
+    public void addActivity(Activity activity) {
+        if (mActivities == null) {
+            mActivities = new HashSet<>();
+        }
+        mActivities.add(activity);
+    }
+
+    /**
+     * 删除Activity
+     *
+     * @param activity
+     */
+    public void removeActivity(Activity activity) {
+        if (mActivities == null) {
+            mActivities = new HashSet<>();
+        }
+        mActivities.remove(activity);
+    }
+
 
     /**
      * 初始化工具类

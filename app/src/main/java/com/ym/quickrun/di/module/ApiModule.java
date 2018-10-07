@@ -1,6 +1,9 @@
 package com.ym.quickrun.di.module;
 
-import com.ym.quickrun.network.api.HttpApi;
+import com.ym.quickrun.di.qualifier.AppUrl;
+import com.ym.quickrun.di.qualifier.WeatherUrl;
+import com.ym.quickrun.network.api.ApiService;
+import com.ym.quickrun.network.api.WeatherService;
 import com.ym.quickrun.network.helper.OkHttpHelper;
 import com.ym.quickrun.network.helper.RetrofitHelper;
 import com.ym.quickrun.network.support.ApiConstants;
@@ -38,27 +41,43 @@ public class ApiModule {
 
     @Provides
     @Singleton
-    public Retrofit.Builder provideRetrofitBuilder(){
+    public Retrofit.Builder provideRetrofitBuilder() {
         return new Retrofit.Builder();
     }
 
 
     @Provides
     @Singleton
-    public RetrofitHelper provideRetrofitHelper(HttpApi httpApi){
+    public RetrofitHelper provideRetrofitHelper(ApiService httpApi) {
         return new RetrofitHelper(httpApi);
     }
 
 
     @Singleton
     @Provides
+    @AppUrl
     public Retrofit provideAppRetrofit(Retrofit.Builder builder, OkHttpClient client) {
         return createRetrofit(builder, client, ApiConstants.APP_BASE_URL);
     }
 
     @Singleton
     @Provides
-    public HttpApi provideHttpApi(Retrofit retrofit){
-        return retrofit.create(HttpApi.class);
+    public ApiService provideApiService(@AppUrl Retrofit retrofit) {
+        return retrofit.create(ApiService.class);
     }
+
+    @Singleton
+    @Provides
+    @WeatherUrl
+    public Retrofit provideWeatherRetrofit(Retrofit.Builder builder, OkHttpClient client) {
+        return createRetrofit(builder, client, ApiConstants.APP_WEATHER_URL);
+    }
+
+    @Singleton
+    @Provides
+    public WeatherService provideWeatherService(@WeatherUrl Retrofit retrofit) {
+        return retrofit.create(WeatherService.class);
+    }
+
+
 }

@@ -7,4 +7,5 @@ package com.ym.quickrun.network.support;
  */
 public interface ApiConstants {
     String APP_BASE_URL = "http://app.bilibili.com/";
+    String APP_WEATHER_URL = "";
 }

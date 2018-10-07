@@ -1,6 +1,6 @@
 package com.ym.quickrun.network.helper;
 
-import com.ym.quickrun.network.api.HttpApi;
+import com.ym.quickrun.network.api.ApiService;
 
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
@@ -8,12 +8,12 @@ import com.ym.quickrun.network.api.HttpApi;
  * desc: RetrofitHelper
  */
 public class RetrofitHelper {
-    private final HttpApi mHttpApi;
+    private final ApiService mHttpApi;
 
-    public RetrofitHelper(HttpApi httpApi){
+    public RetrofitHelper(ApiService httpApi){
         this.mHttpApi = httpApi;
     }
 
-    /*******************************HttpApi********************************************************************************************************/
+    /*******************************ApiService********************************************************************************************************/
 
 }
