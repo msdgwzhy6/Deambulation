@@ -14,7 +14,7 @@ import dagger.Provides;
  */
 @Module
 public class ActivityModule {
-    public Activity mActivity;
+    private Activity mActivity;
 
     public ActivityModule(Activity activity) {
         this.mActivity = activity;

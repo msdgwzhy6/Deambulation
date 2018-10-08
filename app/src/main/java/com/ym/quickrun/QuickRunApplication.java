@@ -57,7 +57,7 @@ public class QuickRunApplication extends Application {
      */
     private void initComponent() {
         mApiComponent = DaggerApiComponent.builder()
-                .apiMoudle(new ApiModule())
+                .apiModule(new ApiModule())
                 .build();
     }
 

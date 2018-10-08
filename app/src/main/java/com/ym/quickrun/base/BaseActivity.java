@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 import com.ym.quickrun.QuickRunApplication;
@@ -15,9 +19,11 @@ import com.ym.quickrun.di.component.DaggerActivityComponent;
 import com.ym.quickrun.di.module.ActivityModule;
 import com.ym.quickrun.utils.AppUtils;
 import com.ym.quickrun.utils.StatusBarUtil;
+import com.ym.quickrun.widget.ProgressWheel;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -30,8 +36,18 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
     @Inject
     protected T mPresenter;
     protected Context mContext;
-    public ConstraintLayout mConstraintLayout;
 
+    protected boolean mBack = true;
+    @BindView(R.id.toolbar)
+    protected Toolbar mToolbar;
+    @BindView(R.id.pw_loading)
+    protected ProgressWheel mLoading;
+    @BindView(R.id.refresh)
+    protected SwipeRefreshLayout mRefreshLayout;
+    @BindView(R.id.recycler)
+    protected RecyclerView mRecycler;
+    @BindView(R.id.em_error)
+    public ConstraintLayout mError;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,8 +59,24 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
         initInject();
         initPresenter();
         QuickRunApplication.getInstance().addActivity(this);
+        if (mToolbar != null) {
+            initToolbar();
+            setSupportActionBar(mToolbar);
+            if (mBack) {
+                mToolbar.setNavigationOnClickListener(v -> finish());
+            }
+        }
         initWidget();
         initData();
+    }
+
+    /**
+     * 初始化Toolbar
+     */
+    protected void initToolbar() {
+        if (mBack) {
+            mToolbar.setNavigationIcon(R.drawable.ic_clip_back_white);
+        }
     }
 
     /**
@@ -95,6 +127,38 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
 
     }
 
+
+    /**
+     * 显示View
+     *
+     * @param views 视图
+     */
+    protected void visible(final View... views) {
+        if (views != null && views.length > 0) {
+            for (View view : views) {
+                if (view != null) {
+                    view.setVisibility(View.VISIBLE);
+                }
+            }
+        }
+    }
+
+    /**
+     * 隐藏View
+     *
+     * @param views 视图
+     */
+    protected void gone(final View... views) {
+        if (views != null && views.length > 0) {
+            for (View view : views) {
+                if (view != null) {
+                    view.setVisibility(View.GONE);
+                }
+            }
+        }
+    }
+
+
     /**
      * 布局文件
      *
@@ -117,4 +181,5 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
     protected void initData() {
 
     }
+
 }

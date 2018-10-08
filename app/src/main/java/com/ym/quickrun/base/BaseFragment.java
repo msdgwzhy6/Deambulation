@@ -7,17 +7,22 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.trello.rxlifecycle2.components.RxFragment;
+import com.ym.quickrun.QuickRunApplication;
+import com.ym.quickrun.R;
 import com.ym.quickrun.di.component.DaggerFragmentComponent;
 import com.ym.quickrun.di.component.FragmentComponent;
 import com.ym.quickrun.di.module.FragmentModule;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -37,7 +42,13 @@ public abstract class BaseFragment<T extends BaseContract.BasePresenter> extends
     protected boolean isPrepared;
     protected boolean isVisible;
     private Unbinder mUnbinder;
-    public ConstraintLayout mConstraintLayout;
+
+    @BindView(R.id.refresh)
+    protected SwipeRefreshLayout mRefreshLayout;
+    @BindView(R.id.recycler)
+    protected RecyclerView mRecycler;
+    @BindView(R.id.em_error)
+    protected ConstraintLayout mError;
 
 
     @Override
@@ -150,9 +161,8 @@ public abstract class BaseFragment<T extends BaseContract.BasePresenter> extends
 
     protected FragmentComponent getFragmentComponent() {
         return DaggerFragmentComponent.builder()
-                //简化每次都初始化网络控件，所以直接在入口文件注册
-                //.apiComponent()
-                .fragmentMoudle(getFragmentModule())
+                .apiComponent(QuickRunApplication.getInstance().getApiComponent())
+                .fragmentModule(new FragmentModule(this))
                 .build();
     }
 

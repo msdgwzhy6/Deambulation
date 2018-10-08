@@ -16,4 +16,5 @@ import dagger.Component;
 @Component(dependencies = ApiComponent.class, modules = ActivityModule.class)
 public interface ActivityComponent {
     Activity getActivity();
+
 }
