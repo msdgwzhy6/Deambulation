@@ -3,11 +3,14 @@ package com.ym.quickrun.model.app;
 import android.content.Intent;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.ym.quickrun.R;
 import com.ym.quickrun.base.BaseActivity;
 import com.ym.quickrun.utils.StatusBarUtil;
 
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -16,6 +19,11 @@ import butterknife.OnClick;
  * desc:
  */
 public class SplashActivity extends BaseActivity {
+
+    @BindView(R.id.iv_splash)
+    ImageView mIvSplash;
+    @BindView(R.id.ll_count_down)
+    LinearLayout mLlCountDown;
 
     @Override
     protected int getLayoutId() {
@@ -44,4 +52,9 @@ public class SplashActivity extends BaseActivity {
     public void toMain() {
         go2Main();
     }
+
+    @OnClick(R.id.iv_splash)
+    public void toSplash() {
+    }
+
 }

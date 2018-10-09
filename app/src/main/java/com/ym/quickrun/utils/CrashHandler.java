@@ -5,9 +5,6 @@ import android.content.Intent;
 
 import com.ym.quickrun.model.app.SplashActivity;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
  * date: 2018/9/28
@@ -21,10 +18,6 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     private Thread.UncaughtExceptionHandler mExceptionHandler;
     private static volatile CrashHandler INSTANCE;
     private Context mContext;
-    /**
-     * 存储设备信息和异常信息
-     */
-    private Map<String, String> infos = new HashMap<>();
 
 
     private CrashHandler() {
