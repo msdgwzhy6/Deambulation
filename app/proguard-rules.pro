@@ -38,7 +38,7 @@
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*  # 混淆时所采用的算法
 
 -keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,*Annotation*,EnclosingMethod #泛型反射
-
+-keepclass * extends java.lang.annotation.Annotation {*;}
 
 -keep public class * extends android.view.View {
     public <init>(android.content.Context);
