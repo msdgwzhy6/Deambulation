@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
  * date: 2018/10/10
- * desc:
+ * desc: 分钟级预报
  */
 
 
@@ -22,11 +22,11 @@ public class MinutelyBean {
 
     private String status;
     private String description;
-    private String datasource;
-    private List<Double> probability;
-    private List<Double> probability_4h;
-    private List<Double> precipitation_2h;
-    private List<Double> precipitation;
+    private String datasource; //天气状况
+    private List<Double> probability; //未来四天可能性出现零星小雨的概率
+    private List<Double> probability_4h; //未来四小时可能性出现零星小雨的概率
+    private List<Double> precipitation_2h; //未来2小时每分钟的降雨量
+    private List<Double> precipitation; //未来一小时每分钟的降雨量，0.03-0.25是小雨，0.25-0.35是中雨, 0.35以上是大雨，根据不同地区情况可以有所调整。如果需要mm/h，请在请求中加参数 ?unit=metric:v2
 
     public String getStatus() {
         return status;
