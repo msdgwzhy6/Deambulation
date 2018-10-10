@@ -42,6 +42,21 @@ public class QuickRunApplication extends Application {
     private ApiComponent mApiComponent;
     private Set<Activity> mActivities;
 
+    /**
+     * 天气token
+     */
+    public static String token = "hIQzmm3L67tu-uHA";
+
+    /**
+     * 经度
+     */
+    public static String longitude;
+
+    /**
+     * 纬度
+     */
+    public static String latitude;
+
     @Override
     public void onCreate() {
         super.onCreate();
