@@ -28,61 +28,6 @@ public class LocalWeatherBean {
     private ResultBean result;
     private List<Double> location;
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getLang() {
-        return lang;
-    }
-
-    public void setLang(String lang) {
-        this.lang = lang;
-    }
-
-    public int getServer_time() {
-        return server_time;
-    }
-
-    public void setServer_time(int server_time) {
-        this.server_time = server_time;
-    }
-
-    public int getTzshift() {
-        return tzshift;
-    }
-
-    public void setTzshift(int tzshift) {
-        this.tzshift = tzshift;
-    }
-
-    public String getUnit() {
-        return unit;
-    }
-
-    public void setUnit(String unit) {
-        this.unit = unit;
-    }
-
-    public ResultBean getResult() {
-        return result;
-    }
-
-    public void setResult(ResultBean result) {
-        this.result = result;
-    }
-
-    public List<Double> getLocation() {
-        return location;
-    }
-
-    public void setLocation(List<Double> location) {
-        this.location = location;
-    }
 
     public static class ResultBean {
         /**
@@ -145,149 +90,6 @@ public class LocalWeatherBean {
         private PrecipitationBean precipitation;
         private WindBean wind;
 
-        public String getStatus() {
-            return status;
-        }
-
-        public void setStatus(String status) {
-            this.status = status;
-        }
-
-        public int getO3() {
-            return o3;
-        }
-
-        public void setO3(int o3) {
-            this.o3 = o3;
-        }
-
-        public double getCo() {
-            return co;
-        }
-
-        public void setCo(double co) {
-            this.co = co;
-        }
-
-        public double getTemperature() {
-            return temperature;
-        }
-
-        public void setTemperature(double temperature) {
-            this.temperature = temperature;
-        }
-
-        public int getPm10() {
-            return pm10;
-        }
-
-        public void setPm10(int pm10) {
-            this.pm10 = pm10;
-        }
-
-        public String getSkycon() {
-            return skycon;
-        }
-
-        public void setSkycon(String skycon) {
-            this.skycon = skycon;
-        }
-
-        public int getCloudrate() {
-            return cloudrate;
-        }
-
-        public void setCloudrate(int cloudrate) {
-            this.cloudrate = cloudrate;
-        }
-
-        public int getAqi() {
-            return aqi;
-        }
-
-        public void setAqi(int aqi) {
-            this.aqi = aqi;
-        }
-
-        public ComfortBean getComfort() {
-            return comfort;
-        }
-
-        public void setComfort(ComfortBean comfort) {
-            this.comfort = comfort;
-        }
-
-        public int getNo2() {
-            return no2;
-        }
-
-        public void setNo2(int no2) {
-            this.no2 = no2;
-        }
-
-        public double getVisibility() {
-            return visibility;
-        }
-
-        public void setVisibility(double visibility) {
-            this.visibility = visibility;
-        }
-
-        public double getHumidity() {
-            return humidity;
-        }
-
-        public void setHumidity(double humidity) {
-            this.humidity = humidity;
-        }
-
-        public double getPres() {
-            return pres;
-        }
-
-        public void setPres(double pres) {
-            this.pres = pres;
-        }
-
-        public UltravioletBean getUltraviolet() {
-            return ultraviolet;
-        }
-
-        public void setUltraviolet(UltravioletBean ultraviolet) {
-            this.ultraviolet = ultraviolet;
-        }
-
-        public int getPm25() {
-            return pm25;
-        }
-
-        public void setPm25(int pm25) {
-            this.pm25 = pm25;
-        }
-
-        public int getSo2() {
-            return so2;
-        }
-
-        public void setSo2(int so2) {
-            this.so2 = so2;
-        }
-
-        public PrecipitationBean getPrecipitation() {
-            return precipitation;
-        }
-
-        public void setPrecipitation(PrecipitationBean precipitation) {
-            this.precipitation = precipitation;
-        }
-
-        public WindBean getWind() {
-            return wind;
-        }
-
-        public void setWind(WindBean wind) {
-            this.wind = wind;
-        }
 
         public static class ComfortBean {
             /**
@@ -298,21 +100,6 @@ public class LocalWeatherBean {
             private int index;
             private String desc;
 
-            public int getIndex() {
-                return index;
-            }
-
-            public void setIndex(int index) {
-                this.index = index;
-            }
-
-            public String getDesc() {
-                return desc;
-            }
-
-            public void setDesc(String desc) {
-                this.desc = desc;
-            }
         }
 
         public static class UltravioletBean {
@@ -324,21 +111,6 @@ public class LocalWeatherBean {
             private int index;
             private String desc;
 
-            public int getIndex() {
-                return index;
-            }
-
-            public void setIndex(int index) {
-                this.index = index;
-            }
-
-            public String getDesc() {
-                return desc;
-            }
-
-            public void setDesc(String desc) {
-                this.desc = desc;
-            }
         }
 
         public static class PrecipitationBean {
@@ -350,21 +122,6 @@ public class LocalWeatherBean {
             private NearestBean nearest;
             private LocalBean local;
 
-            public NearestBean getNearest() {
-                return nearest;
-            }
-
-            public void setNearest(NearestBean nearest) {
-                this.nearest = nearest;
-            }
-
-            public LocalBean getLocal() {
-                return local;
-            }
-
-            public void setLocal(LocalBean local) {
-                this.local = local;
-            }
 
             public static class NearestBean {
                 /**
@@ -377,29 +134,6 @@ public class LocalWeatherBean {
                 private double distance;
                 private double intensity;
 
-                public String getStatus() {
-                    return status;
-                }
-
-                public void setStatus(String status) {
-                    this.status = status;
-                }
-
-                public double getDistance() {
-                    return distance;
-                }
-
-                public void setDistance(double distance) {
-                    this.distance = distance;
-                }
-
-                public double getIntensity() {
-                    return intensity;
-                }
-
-                public void setIntensity(double intensity) {
-                    this.intensity = intensity;
-                }
             }
 
             public static class LocalBean {
@@ -413,29 +147,6 @@ public class LocalWeatherBean {
                 private int intensity;
                 private String datasource;
 
-                public String getStatus() {
-                    return status;
-                }
-
-                public void setStatus(String status) {
-                    this.status = status;
-                }
-
-                public int getIntensity() {
-                    return intensity;
-                }
-
-                public void setIntensity(int intensity) {
-                    this.intensity = intensity;
-                }
-
-                public String getDatasource() {
-                    return datasource;
-                }
-
-                public void setDatasource(String datasource) {
-                    this.datasource = datasource;
-                }
             }
         }
 
@@ -448,21 +159,6 @@ public class LocalWeatherBean {
             private double direction;
             private double speed;
 
-            public double getDirection() {
-                return direction;
-            }
-
-            public void setDirection(double direction) {
-                this.direction = direction;
-            }
-
-            public double getSpeed() {
-                return speed;
-            }
-
-            public void setSpeed(double speed) {
-                this.speed = speed;
-            }
         }
     }
 }
