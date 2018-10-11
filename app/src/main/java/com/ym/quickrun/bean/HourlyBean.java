@@ -34,93 +34,6 @@ public class HourlyBean {
     private List<WindBean> wind; //风量
     private List<TemperatureBean> temperature; //温度
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public List<SkyconBean> getSkycon() {
-        return skycon;
-    }
-
-    public void setSkycon(List<SkyconBean> skycon) {
-        this.skycon = skycon;
-    }
-
-    public List<CloudrateBean> getCloudrate() {
-        return cloudrate;
-    }
-
-    public void setCloudrate(List<CloudrateBean> cloudrate) {
-        this.cloudrate = cloudrate;
-    }
-
-    public List<AqiBean> getAqi() {
-        return aqi;
-    }
-
-    public void setAqi(List<AqiBean> aqi) {
-        this.aqi = aqi;
-    }
-
-    public List<HumidityBean> getHumidity() {
-        return humidity;
-    }
-
-    public void setHumidity(List<HumidityBean> humidity) {
-        this.humidity = humidity;
-    }
-
-    public List<PresBean> getPres() {
-        return pres;
-    }
-
-    public void setPres(List<PresBean> pres) {
-        this.pres = pres;
-    }
-
-    public List<Pm25Bean> getPm25() {
-        return pm25;
-    }
-
-    public void setPm25(List<Pm25Bean> pm25) {
-        this.pm25 = pm25;
-    }
-
-    public List<PrecipitationBean> getPrecipitation() {
-        return precipitation;
-    }
-
-    public void setPrecipitation(List<PrecipitationBean> precipitation) {
-        this.precipitation = precipitation;
-    }
-
-    public List<WindBean> getWind() {
-        return wind;
-    }
-
-    public void setWind(List<WindBean> wind) {
-        this.wind = wind;
-    }
-
-    public List<TemperatureBean> getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(List<TemperatureBean> temperature) {
-        this.temperature = temperature;
-    }
 
     public static class SkyconBean {
         /**
@@ -131,21 +44,6 @@ public class HourlyBean {
         private String value;
         private String datetime;
 
-        public String getValue() {
-            return value;
-        }
-
-        public void setValue(String value) {
-            this.value = value;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class CloudrateBean {
@@ -157,21 +55,6 @@ public class HourlyBean {
         private double value;
         private String datetime;
 
-        public double getValue() {
-            return value;
-        }
-
-        public void setValue(double value) {
-            this.value = value;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class AqiBean {
@@ -183,21 +66,6 @@ public class HourlyBean {
         private int value;
         private String datetime;
 
-        public int getValue() {
-            return value;
-        }
-
-        public void setValue(int value) {
-            this.value = value;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class HumidityBean {
@@ -209,21 +77,6 @@ public class HourlyBean {
         private double value;
         private String datetime;
 
-        public double getValue() {
-            return value;
-        }
-
-        public void setValue(double value) {
-            this.value = value;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class PresBean {
@@ -235,21 +88,6 @@ public class HourlyBean {
         private double value;
         private String datetime;
 
-        public double getValue() {
-            return value;
-        }
-
-        public void setValue(double value) {
-            this.value = value;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class Pm25Bean {
@@ -261,21 +99,6 @@ public class HourlyBean {
         private int value;
         private String datetime;
 
-        public int getValue() {
-            return value;
-        }
-
-        public void setValue(int value) {
-            this.value = value;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class PrecipitationBean {
@@ -287,21 +110,6 @@ public class HourlyBean {
         private double value;
         private String datetime;
 
-        public double getValue() {
-            return value;
-        }
-
-        public void setValue(double value) {
-            this.value = value;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class WindBean {
@@ -315,29 +123,6 @@ public class HourlyBean {
         private double speed;
         private String datetime;
 
-        public double getDirection() {
-            return direction;
-        }
-
-        public void setDirection(double direction) {
-            this.direction = direction;
-        }
-
-        public double getSpeed() {
-            return speed;
-        }
-
-        public void setSpeed(double speed) {
-            this.speed = speed;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class TemperatureBean {
@@ -349,20 +134,5 @@ public class HourlyBean {
         private int value;
         private String datetime;
 
-        public int getValue() {
-            return value;
-        }
-
-        public void setValue(int value) {
-            this.value = value;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 }
