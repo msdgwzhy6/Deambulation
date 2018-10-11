@@ -49,150 +49,6 @@ public class DailyBean {
     private List<WindBeanX> wind; //风量
     private List<Skycon08h20hBean> skycon_08h_20h;
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public List<ColdRiskBean> getColdRisk() {
-        return coldRisk;
-    }
-
-    public void setColdRisk(List<ColdRiskBean> coldRisk) {
-        this.coldRisk = coldRisk;
-    }
-
-    public List<Skycon20h32hBean> getSkycon_20h_32h() {
-        return skycon_20h_32h;
-    }
-
-    public void setSkycon_20h_32h(List<Skycon20h32hBean> skycon_20h_32h) {
-        this.skycon_20h_32h = skycon_20h_32h;
-    }
-
-    public List<TemperatureBeanX> getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(List<TemperatureBeanX> temperature) {
-        this.temperature = temperature;
-    }
-
-    public List<SkyconBeanX> getSkycon() {
-        return skycon;
-    }
-
-    public void setSkycon(List<SkyconBeanX> skycon) {
-        this.skycon = skycon;
-    }
-
-    public List<CloudrateBeanX> getCloudrate() {
-        return cloudrate;
-    }
-
-    public void setCloudrate(List<CloudrateBeanX> cloudrate) {
-        this.cloudrate = cloudrate;
-    }
-
-    public List<AqiBeanX> getAqi() {
-        return aqi;
-    }
-
-    public void setAqi(List<AqiBeanX> aqi) {
-        this.aqi = aqi;
-    }
-
-    public List<ComfortBean> getComfort() {
-        return comfort;
-    }
-
-    public void setComfort(List<ComfortBean> comfort) {
-        this.comfort = comfort;
-    }
-
-    public List<HumidityBeanX> getHumidity() {
-        return humidity;
-    }
-
-    public void setHumidity(List<HumidityBeanX> humidity) {
-        this.humidity = humidity;
-    }
-
-    public List<AstroBean> getAstro() {
-        return astro;
-    }
-
-    public void setAstro(List<AstroBean> astro) {
-        this.astro = astro;
-    }
-
-    public List<PresBeanX> getPres() {
-        return pres;
-    }
-
-    public void setPres(List<PresBeanX> pres) {
-        this.pres = pres;
-    }
-
-    public List<UltravioletBean> getUltraviolet() {
-        return ultraviolet;
-    }
-
-    public void setUltraviolet(List<UltravioletBean> ultraviolet) {
-        this.ultraviolet = ultraviolet;
-    }
-
-    public List<Pm25BeanX> getPm25() {
-        return pm25;
-    }
-
-    public void setPm25(List<Pm25BeanX> pm25) {
-        this.pm25 = pm25;
-    }
-
-    public List<DressingBean> getDressing() {
-        return dressing;
-    }
-
-    public void setDressing(List<DressingBean> dressing) {
-        this.dressing = dressing;
-    }
-
-    public List<CarWashingBean> getCarWashing() {
-        return carWashing;
-    }
-
-    public void setCarWashing(List<CarWashingBean> carWashing) {
-        this.carWashing = carWashing;
-    }
-
-    public List<PrecipitationBeanX> getPrecipitation() {
-        return precipitation;
-    }
-
-    public void setPrecipitation(List<PrecipitationBeanX> precipitation) {
-        this.precipitation = precipitation;
-    }
-
-    public List<WindBeanX> getWind() {
-        return wind;
-    }
-
-    public void setWind(List<WindBeanX> wind) {
-        this.wind = wind;
-    }
-
-    public List<Skycon08h20hBean> getSkycon_08h_20h() {
-        return skycon_08h_20h;
-    }
-
-    public void setSkycon_08h_20h(List<Skycon08h20hBean> skycon_08h_20h) {
-        this.skycon_08h_20h = skycon_08h_20h;
-    }
-
     public static class ColdRiskBean {
         /**
          * index : 3
@@ -203,30 +59,6 @@ public class DailyBean {
         private String index;
         private String desc;
         private String datetime;
-
-        public String getIndex() {
-            return index;
-        }
-
-        public void setIndex(String index) {
-            this.index = index;
-        }
-
-        public String getDesc() {
-            return desc;
-        }
-
-        public void setDesc(String desc) {
-            this.desc = desc;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class Skycon20h32hBean {
@@ -238,21 +70,6 @@ public class DailyBean {
         private String date;
         private String value;
 
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        public void setValue(String value) {
-            this.value = value;
-        }
     }
 
     public static class TemperatureBeanX {
@@ -267,38 +84,6 @@ public class DailyBean {
         private int max;
         private double avg;
         private int min;
-
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public int getMax() {
-            return max;
-        }
-
-        public void setMax(int max) {
-            this.max = max;
-        }
-
-        public double getAvg() {
-            return avg;
-        }
-
-        public void setAvg(double avg) {
-            this.avg = avg;
-        }
-
-        public int getMin() {
-            return min;
-        }
-
-        public void setMin(int min) {
-            this.min = min;
-        }
     }
 
     public static class SkyconBeanX {
@@ -310,21 +95,6 @@ public class DailyBean {
         private String date;
         private String value;
 
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        public void setValue(String value) {
-            this.value = value;
-        }
     }
 
     public static class CloudrateBeanX {
@@ -339,38 +109,6 @@ public class DailyBean {
         private double max;
         private double avg;
         private double min;
-
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public double getMax() {
-            return max;
-        }
-
-        public void setMax(double max) {
-            this.max = max;
-        }
-
-        public double getAvg() {
-            return avg;
-        }
-
-        public void setAvg(double avg) {
-            this.avg = avg;
-        }
-
-        public double getMin() {
-            return min;
-        }
-
-        public void setMin(double min) {
-            this.min = min;
-        }
     }
 
     public static class AqiBeanX {
@@ -385,38 +123,6 @@ public class DailyBean {
         private int max;
         private double avg;
         private int min;
-
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public int getMax() {
-            return max;
-        }
-
-        public void setMax(int max) {
-            this.max = max;
-        }
-
-        public double getAvg() {
-            return avg;
-        }
-
-        public void setAvg(double avg) {
-            this.avg = avg;
-        }
-
-        public int getMin() {
-            return min;
-        }
-
-        public void setMin(int min) {
-            this.min = min;
-        }
     }
 
     public static class ComfortBean {
@@ -429,30 +135,6 @@ public class DailyBean {
         private String index;
         private String desc;
         private String datetime;
-
-        public String getIndex() {
-            return index;
-        }
-
-        public void setIndex(String index) {
-            this.index = index;
-        }
-
-        public String getDesc() {
-            return desc;
-        }
-
-        public void setDesc(String desc) {
-            this.desc = desc;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class HumidityBeanX {
@@ -468,37 +150,6 @@ public class DailyBean {
         private double avg;
         private double min;
 
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public double getMax() {
-            return max;
-        }
-
-        public void setMax(double max) {
-            this.max = max;
-        }
-
-        public double getAvg() {
-            return avg;
-        }
-
-        public void setAvg(double avg) {
-            this.avg = avg;
-        }
-
-        public double getMin() {
-            return min;
-        }
-
-        public void setMin(double min) {
-            this.min = min;
-        }
     }
 
     public static class AstroBean {
@@ -512,29 +163,6 @@ public class DailyBean {
         private SunsetBean sunset;
         private SunriseBean sunrise;
 
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public SunsetBean getSunset() {
-            return sunset;
-        }
-
-        public void setSunset(SunsetBean sunset) {
-            this.sunset = sunset;
-        }
-
-        public SunriseBean getSunrise() {
-            return sunrise;
-        }
-
-        public void setSunrise(SunriseBean sunrise) {
-            this.sunrise = sunrise;
-        }
 
         public static class SunsetBean {
             /**
@@ -542,14 +170,6 @@ public class DailyBean {
              */
 
             private String time;
-
-            public String getTime() {
-                return time;
-            }
-
-            public void setTime(String time) {
-                this.time = time;
-            }
         }
 
         public static class SunriseBean {
@@ -558,14 +178,6 @@ public class DailyBean {
              */
 
             private String time;
-
-            public String getTime() {
-                return time;
-            }
-
-            public void setTime(String time) {
-                this.time = time;
-            }
         }
     }
 
@@ -582,37 +194,6 @@ public class DailyBean {
         private double avg;
         private double min;
 
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public double getMax() {
-            return max;
-        }
-
-        public void setMax(double max) {
-            this.max = max;
-        }
-
-        public double getAvg() {
-            return avg;
-        }
-
-        public void setAvg(double avg) {
-            this.avg = avg;
-        }
-
-        public double getMin() {
-            return min;
-        }
-
-        public void setMin(double min) {
-            this.min = min;
-        }
     }
 
     public static class UltravioletBean {
@@ -625,30 +206,6 @@ public class DailyBean {
         private String index;
         private String desc;
         private String datetime;
-
-        public String getIndex() {
-            return index;
-        }
-
-        public void setIndex(String index) {
-            this.index = index;
-        }
-
-        public String getDesc() {
-            return desc;
-        }
-
-        public void setDesc(String desc) {
-            this.desc = desc;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class Pm25BeanX {
@@ -663,38 +220,6 @@ public class DailyBean {
         private int max;
         private double avg;
         private int min;
-
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public int getMax() {
-            return max;
-        }
-
-        public void setMax(int max) {
-            this.max = max;
-        }
-
-        public double getAvg() {
-            return avg;
-        }
-
-        public void setAvg(double avg) {
-            this.avg = avg;
-        }
-
-        public int getMin() {
-            return min;
-        }
-
-        public void setMin(int min) {
-            this.min = min;
-        }
     }
 
     public static class DressingBean {
@@ -708,29 +233,6 @@ public class DailyBean {
         private String desc;
         private String datetime;
 
-        public String getIndex() {
-            return index;
-        }
-
-        public void setIndex(String index) {
-            this.index = index;
-        }
-
-        public String getDesc() {
-            return desc;
-        }
-
-        public void setDesc(String desc) {
-            this.desc = desc;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class CarWashingBean {
@@ -743,30 +245,6 @@ public class DailyBean {
         private String index;
         private String desc;
         private String datetime;
-
-        public String getIndex() {
-            return index;
-        }
-
-        public void setIndex(String index) {
-            this.index = index;
-        }
-
-        public String getDesc() {
-            return desc;
-        }
-
-        public void setDesc(String desc) {
-            this.desc = desc;
-        }
-
-        public String getDatetime() {
-            return datetime;
-        }
-
-        public void setDatetime(String datetime) {
-            this.datetime = datetime;
-        }
     }
 
     public static class PrecipitationBeanX {
@@ -781,38 +259,6 @@ public class DailyBean {
         private double max;
         private double avg;
         private int min;
-
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public double getMax() {
-            return max;
-        }
-
-        public void setMax(double max) {
-            this.max = max;
-        }
-
-        public double getAvg() {
-            return avg;
-        }
-
-        public void setAvg(double avg) {
-            this.avg = avg;
-        }
-
-        public int getMin() {
-            return min;
-        }
-
-        public void setMin(int min) {
-            this.min = min;
-        }
     }
 
     public static class WindBeanX {
@@ -828,38 +274,6 @@ public class DailyBean {
         private AvgBean avg;
         private MinBean min;
 
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public MaxBean getMax() {
-            return max;
-        }
-
-        public void setMax(MaxBean max) {
-            this.max = max;
-        }
-
-        public AvgBean getAvg() {
-            return avg;
-        }
-
-        public void setAvg(AvgBean avg) {
-            this.avg = avg;
-        }
-
-        public MinBean getMin() {
-            return min;
-        }
-
-        public void setMin(MinBean min) {
-            this.min = min;
-        }
-
         public static class MaxBean {
             /**
              * direction : 56.57
@@ -869,21 +283,6 @@ public class DailyBean {
             private double direction;
             private double speed;
 
-            public double getDirection() {
-                return direction;
-            }
-
-            public void setDirection(double direction) {
-                this.direction = direction;
-            }
-
-            public double getSpeed() {
-                return speed;
-            }
-
-            public void setSpeed(double speed) {
-                this.speed = speed;
-            }
         }
 
         public static class AvgBean {
@@ -895,21 +294,6 @@ public class DailyBean {
             private double direction;
             private double speed;
 
-            public double getDirection() {
-                return direction;
-            }
-
-            public void setDirection(double direction) {
-                this.direction = direction;
-            }
-
-            public double getSpeed() {
-                return speed;
-            }
-
-            public void setSpeed(double speed) {
-                this.speed = speed;
-            }
         }
 
         public static class MinBean {
@@ -921,21 +305,6 @@ public class DailyBean {
             private double direction;
             private double speed;
 
-            public double getDirection() {
-                return direction;
-            }
-
-            public void setDirection(double direction) {
-                this.direction = direction;
-            }
-
-            public double getSpeed() {
-                return speed;
-            }
-
-            public void setSpeed(double speed) {
-                this.speed = speed;
-            }
         }
     }
 
@@ -947,21 +316,5 @@ public class DailyBean {
 
         private String date;
         private String value;
-
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        public void setValue(String value) {
-            this.value = value;
-        }
     }
 }
