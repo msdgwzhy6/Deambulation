@@ -48,8 +48,8 @@ public class ApiModule {
 
     @Provides
     @Singleton
-    public RetrofitHelper provideRetrofitHelper(ApiService httpApi) {
-        return new RetrofitHelper(httpApi);
+    public RetrofitHelper provideRetrofitHelper(ApiService apiService, WeatherService weatherService) {
+        return new RetrofitHelper(apiService, weatherService);
     }
 
 

@@ -14,6 +14,14 @@ import retrofit2.http.Path;
  */
 public interface WeatherService {
 
+    /**
+     * 获取当地天气状况
+     *
+     * @param token     token
+     * @param latitude  纬度
+     * @param longitude 经度
+     * @return
+     */
     @GET("v2/{token}/{latitude},{longitude}/realtime.json")
     Flowable<LocalWeatherBean> getLocalWeather(
             @Path("token") String token,
@@ -22,7 +30,14 @@ public interface WeatherService {
     );
 
 
-
+    /**
+     * 获取当地未来天气状况
+     *
+     * @param token     token
+     * @param latitude  纬度
+     * @param longitude 经度
+     * @return
+     */
     @GET("v2/{token}/{latitude},{longitude}/forecast.json")
     Flowable<FutureWeatherBean> getFutureWeather(
             @Path("token") String token,
