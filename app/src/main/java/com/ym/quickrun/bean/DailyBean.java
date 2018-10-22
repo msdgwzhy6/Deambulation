@@ -30,24 +30,24 @@ public class DailyBean {
      * skycon_08h_20h : [{"date":"2018-10-10","value":"RAIN"},{"date":"2018-10-11","value":"RAIN"},{"date":"2018-10-12","value":"RAIN"},{"date":"2018-10-13","value":"RAIN"},{"date":"2018-10-14","value":"RAIN"}]
      */
 
-    private String status;
-    private List<ColdRiskBean> coldRisk; //寒冷天气
-    private List<Skycon20h32hBean> skycon_20h_32h;
-    private List<TemperatureBeanX> temperature; //温度
-    private List<SkyconBeanX> skycon; //天气状况
-    private List<CloudrateBeanX> cloudrate; // 雾气情况
-    private List<AqiBeanX> aqi; //空气质量指数
-    private List<ComfortBean> comfort; //舒适度
-    private List<HumidityBeanX> humidity; //湿度
-    private List<AstroBean> astro; //夜晚时间
-    private List<PresBeanX> pres; //大气压强
-    private List<UltravioletBean> ultraviolet; //紫外线
-    private List<Pm25BeanX> pm25; // PM2.5指数
-    private List<DressingBean> dressing; //空气凉爽
-    private List<CarWashingBean> carWashing; //洗车
-    private List<PrecipitationBeanX> precipitation;  //降水量  单位 mm/h，0.05 ~ 0.9 小雨 0.9 ~ 2.87 中雨 >2.87大雨；
-    private List<WindBeanX> wind; //风量
-    private List<Skycon08h20hBean> skycon_08h_20h;
+    public String status;
+    public List<ColdRiskBean> coldRisk; //寒冷天气
+    public List<Skycon20h32hBean> skycon_20h_32h;
+    public List<TemperatureBeanX> temperature; //温度
+    public List<SkyconBeanX> skycon; //天气状况
+    public List<CloudrateBeanX> cloudrate; // 雾气情况
+    public List<AqiBeanX> aqi; //空气质量指数
+    public List<ComfortBean> comfort; //舒适度
+    public List<HumidityBeanX> humidity; //湿度
+    public List<AstroBean> astro; //夜晚时间
+    public List<PresBeanX> pres; //大气压强
+    public List<UltravioletBean> ultraviolet; //紫外线
+    public List<Pm25BeanX> pm25; // PM2.5指数
+    public List<DressingBean> dressing; //空气凉爽
+    public List<CarWashingBean> carWashing; //洗车
+    public List<PrecipitationBeanX> precipitation;  //降水量  单位 mm/h，0.05 ~ 0.9 小雨 0.9 ~ 2.87 中雨 >2.87大雨；
+    public List<WindBeanX> wind; //风量
+    public List<Skycon08h20hBean> skycon_08h_20h;
 
     public static class ColdRiskBean {
         /**
@@ -56,9 +56,9 @@ public class DailyBean {
          * datetime : 2018-10-10
          */
 
-        private String index;
-        private String desc;
-        private String datetime;
+        public String index;
+        public String desc;
+        public String datetime;
     }
 
     public static class Skycon20h32hBean {
@@ -67,8 +67,8 @@ public class DailyBean {
          * value : RAIN
          */
 
-        private String date;
-        private String value;
+        public String date;
+        public String value;
 
     }
 
@@ -80,10 +80,10 @@ public class DailyBean {
          * min : 22
          */
 
-        private String date;
-        private int max;
-        private double avg;
-        private int min;
+        public String date;
+        public int max;
+        public double avg;
+        public int min;
     }
 
     public static class SkyconBeanX {
@@ -92,8 +92,8 @@ public class DailyBean {
          * value : RAIN
          */
 
-        private String date;
-        private String value;
+        public String date;
+        public String value;
 
     }
 
@@ -105,10 +105,10 @@ public class DailyBean {
          * min : 0.78
          */
 
-        private String date;
-        private double max;
-        private double avg;
-        private double min;
+        public String date;
+        public double max;
+        public double avg;
+        public double min;
     }
 
     public static class AqiBeanX {
@@ -119,10 +119,10 @@ public class DailyBean {
          * min : 14
          */
 
-        private String date;
-        private int max;
-        private double avg;
-        private int min;
+        public String date;
+        public int max;
+        public double avg;
+        public int min;
     }
 
     public static class ComfortBean {
@@ -132,9 +132,9 @@ public class DailyBean {
          * datetime : 2018-10-10
          */
 
-        private String index;
-        private String desc;
-        private String datetime;
+        public String index;
+        public String desc;
+        public String datetime;
     }
 
     public static class HumidityBeanX {
@@ -145,10 +145,10 @@ public class DailyBean {
          * min : 0.79
          */
 
-        private String date;
-        private double max;
-        private double avg;
-        private double min;
+        public String date;
+        public double max;
+        public double avg;
+        public double min;
 
     }
 
@@ -159,9 +159,9 @@ public class DailyBean {
          * sunrise : {"time":"05:49"}
          */
 
-        private String date;
-        private SunsetBean sunset;
-        private SunriseBean sunrise;
+        public String date;
+        public SunsetBean sunset;
+        public SunriseBean sunrise;
 
 
         public static class SunsetBean {
@@ -169,7 +169,7 @@ public class DailyBean {
              * time : 17:31
              */
 
-            private String time;
+            public String time;
         }
 
         public static class SunriseBean {
@@ -177,7 +177,7 @@ public class DailyBean {
              * time : 05:49
              */
 
-            private String time;
+            public String time;
         }
     }
 
@@ -189,10 +189,10 @@ public class DailyBean {
          * min : 99887.44
          */
 
-        private String date;
-        private double max;
-        private double avg;
-        private double min;
+        public String date;
+        public double max;
+        public double avg;
+        public double min;
 
     }
 
@@ -203,9 +203,9 @@ public class DailyBean {
          * datetime : 2018-10-10
          */
 
-        private String index;
-        private String desc;
-        private String datetime;
+        public String index;
+        public String desc;
+        public String datetime;
     }
 
     public static class Pm25BeanX {
@@ -216,10 +216,10 @@ public class DailyBean {
          * min : 7
          */
 
-        private String date;
-        private int max;
-        private double avg;
-        private int min;
+        public String date;
+        public int max;
+        public double avg;
+        public int min;
     }
 
     public static class DressingBean {
@@ -229,9 +229,9 @@ public class DailyBean {
          * datetime : 2018-10-10
          */
 
-        private String index;
-        private String desc;
-        private String datetime;
+        public String index;
+        public String desc;
+        public String datetime;
 
     }
 
@@ -242,9 +242,9 @@ public class DailyBean {
          * datetime : 2018-10-10
          */
 
-        private String index;
-        private String desc;
-        private String datetime;
+        public String index;
+        public String desc;
+        public String datetime;
     }
 
     public static class PrecipitationBeanX {
@@ -255,10 +255,10 @@ public class DailyBean {
          * min : 0
          */
 
-        private String date;
-        private double max;
-        private double avg;
-        private int min;
+        public String date;
+        public double max;
+        public double avg;
+        public int min;
     }
 
     public static class WindBeanX {
@@ -269,10 +269,10 @@ public class DailyBean {
          * min : {"direction":66.03,"speed":14.97}
          */
 
-        private String date;
-        private MaxBean max;
-        private AvgBean avg;
-        private MinBean min;
+        public String date;
+        public MaxBean max;
+        public AvgBean avg;
+        public MinBean min;
 
         public static class MaxBean {
             /**
@@ -280,8 +280,8 @@ public class DailyBean {
              * speed : 23.33
              */
 
-            private double direction;
-            private double speed;
+            public double direction;
+            public double speed;
 
         }
 
@@ -291,8 +291,8 @@ public class DailyBean {
              * speed : 19.96
              */
 
-            private double direction;
-            private double speed;
+            public double direction;
+            public double speed;
 
         }
 
@@ -302,8 +302,8 @@ public class DailyBean {
              * speed : 14.97
              */
 
-            private double direction;
-            private double speed;
+            public double direction;
+            public double speed;
 
         }
     }
@@ -314,7 +314,7 @@ public class DailyBean {
          * value : RAIN
          */
 
-        private String date;
-        private String value;
+        public String date;
+        public String value;
     }
 }
