@@ -20,13 +20,13 @@ public class LocalWeatherBean {
      * result : {"status":"ok","o3":19,"co":0.3,"temperature":13.79,"pm10":28,"skycon":"CLEAR_DAY","cloudrate":0,"aqi":28,"comfort":{"index":7,"desc":"冷"},"no2":26,"visibility":30.7,"humidity":0.26,"pres":101876.79,"ultraviolet":{"index":7,"desc":"强"},"pm25":11,"so2":6,"precipitation":{"nearest":{"status":"ok","distance":46.03,"intensity":0.1875},"local":{"status":"ok","intensity":0,"datasource":"radar"}},"wind":{"direction":328.35,"speed":6.5}}
      */
 
-    private String status;
-    private String lang;
-    private int server_time;
-    private int tzshift;
-    private String unit;
-    private ResultBean result;
-    private List<Double> location;
+    public String status;
+    public String lang;
+    public int server_time;
+    public int tzshift;
+    public String unit;
+    public ResultBean result;
+    public List<Double> location;
 
 
     public static class ResultBean {
@@ -71,24 +71,24 @@ public class LocalWeatherBean {
                     "speed":6.5  //风速，米制下是公里每小时}
          */
 
-        private String status;
-        private int o3;
-        private double co;
-        private double temperature;
-        private int pm10;
-        private String skycon;
-        private int cloudrate;
-        private int aqi;
-        private ComfortBean comfort;
-        private int no2;
-        private double visibility;
-        private double humidity;
-        private double pres;
-        private UltravioletBean ultraviolet;
-        private int pm25;
-        private int so2;
-        private PrecipitationBean precipitation;
-        private WindBean wind;
+        public String status;
+        public int o3;
+        public double co;
+        public double temperature;
+        public int pm10;
+        public String skycon;
+        public int cloudrate;
+        public int aqi;
+        public ComfortBean comfort;
+        public int no2;
+        public double visibility;
+        public double humidity;
+        public double pres;
+        public UltravioletBean ultraviolet;
+        public int pm25;
+        public int so2;
+        public PrecipitationBean precipitation;
+        public WindBean wind;
 
 
         public static class ComfortBean {
@@ -97,8 +97,8 @@ public class LocalWeatherBean {
              * desc : 冷
              */
 
-            private int index;
-            private String desc;
+            public int index;
+            public String desc;
 
         }
 
@@ -108,8 +108,8 @@ public class LocalWeatherBean {
              * desc : 强
              */
 
-            private int index;
-            private String desc;
+            public int index;
+            public String desc;
 
         }
 
@@ -119,8 +119,8 @@ public class LocalWeatherBean {
              * local : {"status":"ok","intensity":0,"datasource":"radar"}
              */
 
-            private NearestBean nearest;
-            private LocalBean local;
+            public NearestBean nearest;
+            public LocalBean local;
 
 
             public static class NearestBean {
@@ -130,9 +130,9 @@ public class LocalWeatherBean {
                  * intensity : 0.1875
                  */
 
-                private String status;
-                private double distance;
-                private double intensity;
+                public String status;
+                public double distance;
+                public double intensity;
 
             }
 
@@ -143,9 +143,9 @@ public class LocalWeatherBean {
                  * datasource : radar
                  */
 
-                private String status;
-                private int intensity;
-                private String datasource;
+                public String status;
+                public int intensity;
+                public String datasource;
 
             }
         }
@@ -156,8 +156,8 @@ public class LocalWeatherBean {
              * speed : 6.5
              */
 
-            private double direction;
-            private double speed;
+            public double direction;
+            public double speed;
 
         }
     }
