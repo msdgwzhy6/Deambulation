@@ -16,6 +16,7 @@ import com.ym.quickrun.utils.StatusBarUtil;
 import com.ym.quickrun.utils.ToastUtils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
@@ -63,7 +64,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     protected void initData() {
-        //mFragments = Collections.singletonList(HomeFragment.newInstance());
+        mFragments = Collections.singletonList(HomeFragment.newInstance());
 
         //初始化位置
         switchFragmentIndex(0);
