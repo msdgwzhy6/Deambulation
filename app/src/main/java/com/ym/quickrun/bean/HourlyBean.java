@@ -22,17 +22,17 @@ public class HourlyBean {
      * temperature : [{"value":25,"datetime":"2018-10-10 13:00"},{"value":25,"datetime":"2018-10-10 14:00"},{"value":24,"datetime":"2018-10-10 15:00"},{"value":24,"datetime":"2018-10-10 16:00"},{"value":24,"datetime":"2018-10-10 17:00"},{"value":23,"datetime":"2018-10-10 18:00"},{"value":23,"datetime":"2018-10-10 19:00"},{"value":22,"datetime":"2018-10-10 20:00"},{"value":22,"datetime":"2018-10-10 21:00"},{"value":22,"datetime":"2018-10-10 22:00"},{"value":22,"datetime":"2018-10-10 23:00"},{"value":22.1,"datetime":"2018-10-11 00:00"},{"value":21.4,"datetime":"2018-10-11 01:00"},{"value":21.6,"datetime":"2018-10-11 02:00"},{"value":21.8,"datetime":"2018-10-11 03:00"},{"value":22,"datetime":"2018-10-11 04:00"},{"value":22.1,"datetime":"2018-10-11 05:00"},{"value":22.2,"datetime":"2018-10-11 06:00"},{"value":22.3,"datetime":"2018-10-11 07:00"},{"value":22.4,"datetime":"2018-10-11 08:00"},{"value":23,"datetime":"2018-10-11 09:00"},{"value":21.7,"datetime":"2018-10-11 10:00"},{"value":21.4,"datetime":"2018-10-11 11:00"},{"value":21.1,"datetime":"2018-10-11 12:00"},{"value":21.43,"datetime":"2018-10-11 13:00"},{"value":20,"datetime":"2018-10-11 14:00"},{"value":20.97,"datetime":"2018-10-11 15:00"},{"value":20.82,"datetime":"2018-10-11 16:00"},{"value":20.69,"datetime":"2018-10-11 17:00"},{"value":20.64,"datetime":"2018-10-11 18:00"},{"value":20.62,"datetime":"2018-10-11 19:00"},{"value":20.75,"datetime":"2018-10-11 20:00"},{"value":20.84,"datetime":"2018-10-11 21:00"},{"value":20.9,"datetime":"2018-10-11 22:00"},{"value":20.94,"datetime":"2018-10-11 23:00"},{"value":21,"datetime":"2018-10-12 00:00"},{"value":21,"datetime":"2018-10-12 01:00"},{"value":21,"datetime":"2018-10-12 02:00"},{"value":21,"datetime":"2018-10-12 03:00"},{"value":21,"datetime":"2018-10-12 04:00"},{"value":21,"datetime":"2018-10-12 05:00"},{"value":21,"datetime":"2018-10-12 06:00"},{"value":21.03,"datetime":"2018-10-12 07:00"},{"value":21.12,"datetime":"2018-10-12 08:00"},{"value":21.23,"datetime":"2018-10-12 09:00"},{"value":21.35,"datetime":"2018-10-12 10:00"},{"value":21.45,"datetime":"2018-10-12 11:00"},{"value":21.75,"datetime":"2018-10-12 12:00"}]
      */
 
-    private String status;
-    private String description;
-    private List<SkyconBean> skycon; //天气状况
-    private List<CloudrateBean> cloudrate; // 雾气情况
-    private List<AqiBean> aqi; //空气质量指数
-    private List<HumidityBean> humidity; //湿度
-    private List<PresBean> pres; //大气压强
-    private List<Pm25Bean> pm25; // PM2.5指数
-    private List<PrecipitationBean> precipitation; //降水量  单位 mm/h，0.05 ~ 0.9 小雨 0.9 ~ 2.87 中雨 >2.87大雨；
-    private List<WindBean> wind; //风量
-    private List<TemperatureBean> temperature; //温度
+    public String status;
+    public String description;
+    public List<SkyconBean> skycon; //天气状况
+    public List<CloudrateBean> cloudrate; // 雾气情况
+    public List<AqiBean> aqi; //空气质量指数
+    public List<HumidityBean> humidity; //湿度
+    public List<PresBean> pres; //大气压强
+    public List<Pm25Bean> pm25; // PM2.5指数
+    public List<PrecipitationBean> precipitation; //降水量  单位 mm/h，0.05 ~ 0.9 小雨 0.9 ~ 2.87 中雨 >2.87大雨；
+    public List<WindBean> wind; //风量
+    public List<TemperatureBean> temperature; //温度
 
 
     public static class SkyconBean {
@@ -41,8 +41,8 @@ public class HourlyBean {
          * datetime : 2018-10-10 13:00
          */
 
-        private String value;
-        private String datetime;
+        public String value;
+        public String datetime;
 
     }
 
@@ -52,8 +52,8 @@ public class HourlyBean {
          * datetime : 2018-10-10 13:00
          */
 
-        private double value;
-        private String datetime;
+        public double value;
+        public String datetime;
 
     }
 
@@ -63,8 +63,8 @@ public class HourlyBean {
          * datetime : 2018-10-10 13:00
          */
 
-        private int value;
-        private String datetime;
+        public int value;
+        public String datetime;
 
     }
 
@@ -74,8 +74,8 @@ public class HourlyBean {
          * datetime : 2018-10-10 13:00
          */
 
-        private double value;
-        private String datetime;
+        public double value;
+        public String datetime;
 
     }
 
@@ -85,8 +85,8 @@ public class HourlyBean {
          * datetime : 2018-10-10 13:00
          */
 
-        private double value;
-        private String datetime;
+        public double value;
+        public String datetime;
 
     }
 
@@ -96,8 +96,8 @@ public class HourlyBean {
          * datetime : 2018-10-10 13:00
          */
 
-        private int value;
-        private String datetime;
+        public int value;
+        public String datetime;
 
     }
 
@@ -107,8 +107,8 @@ public class HourlyBean {
          * datetime : 2018-10-10 13:00
          */
 
-        private double value;
-        private String datetime;
+        public double value;
+        public String datetime;
 
     }
 
@@ -119,9 +119,9 @@ public class HourlyBean {
          * datetime : 2018-10-10 13:00
          */
 
-        private double direction;
-        private double speed;
-        private String datetime;
+        public double direction;
+        public double speed;
+        public String datetime;
 
     }
 
@@ -131,8 +131,8 @@ public class HourlyBean {
          * datetime : 2018-10-10 13:00
          */
 
-        private int value;
-        private String datetime;
+        public int value;
+        public String datetime;
 
     }
 }
