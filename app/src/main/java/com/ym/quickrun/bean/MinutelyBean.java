@@ -20,12 +20,12 @@ public class MinutelyBean {
      * precipitation : [0.0327,0.0369,0.0428,0.0497,0.0566,0.0625,0.0668,0.0693,0.0701,0.0692,0.0666,0.0625,0.0569,0.0501,0.0427,0.035,0.0276,0.0208,0.0151,0.0103,0.0065,0.0036,0.0014,0,0,0,0,0,0,0,2.0E-4,3.0E-4,3.0E-4,2.0E-4,1.0E-4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
      */
 
-    private String status;
-    private String description;
-    private String datasource; //天气状况
-    private List<Double> probability; //未来四天可能性出现零星小雨的概率
-    private List<Double> probability_4h; //未来四小时可能性出现零星小雨的概率
-    private List<Double> precipitation_2h; //未来2小时每分钟的降雨量
-    private List<Double> precipitation; //未来一小时每分钟的降雨量，0.03-0.25是小雨，0.25-0.35是中雨, 0.35以上是大雨，根据不同地区情况可以有所调整。如果需要mm/h，请在请求中加参数 ?unit=metric:v2
+    public String status;
+    public String description;
+    public String datasource; //天气状况
+    public List<Double> probability; //未来四天可能性出现零星小雨的概率
+    public List<Double> probability_4h; //未来四小时可能性出现零星小雨的概率
+    public List<Double> precipitation_2h; //未来2小时每分钟的降雨量
+    public List<Double> precipitation; //未来一小时每分钟的降雨量，0.03-0.25是小雨，0.25-0.35是中雨, 0.35以上是大雨，根据不同地区情况可以有所调整。如果需要mm/h，请在请求中加参数 ?unit=metric:v2
 
 }
