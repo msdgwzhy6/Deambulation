@@ -21,15 +21,15 @@ public class FutureWeatherBean {
      * location : [25.1552,121.6544]
      */
 
-    private String status;
-    private String lang;
-    private ResultBean result;
-    private int server_time;
-    private String api_status;
-    private int tzshift;
-    private String api_version;
-    private String unit;
-    private List<Double> location;
+    public String status;
+    public String lang;
+    public ResultBean result;
+    public int server_time;
+    public String api_status;
+    public int tzshift;
+    public String api_version;
+    public String unit;
+    public List<Double> location;
 
     public static class ResultBean {
         /**
@@ -40,11 +40,11 @@ public class FutureWeatherBean {
          * minutely : {"status":"ok","description":"零星小雨，点点滴滴","probability":[0.7898951173,0.6828188896,0.52573663,0.2881945372],"probability_4h":[0.7898951173,0.52573663,0.3594248891,0.5171459317],"datasource":"radar","precipitation_2h":[0.0327,0.0369,0.0428,0.0497,0.0566,0.0625,0.0668,0.0693,0.0701,0.0692,0.0666,0.0625,0.0569,0.0501,0.0427,0.035,0.0276,0.0208,0.0151,0.0103,0.0065,0.0036,0.0014,0,0,0,0,0,0,0,2.0E-4,3.0E-4,3.0E-4,2.0E-4,1.0E-4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"precipitation":[0.0327,0.0369,0.0428,0.0497,0.0566,0.0625,0.0668,0.0693,0.0701,0.0692,0.0666,0.0625,0.0569,0.0501,0.0427,0.035,0.0276,0.0208,0.0151,0.0103,0.0065,0.0036,0.0014,0,0,0,0,0,0,0,2.0E-4,3.0E-4,3.0E-4,2.0E-4,1.0E-4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}
          */
 
-        private HourlyBean hourly;
-        private String forecast_keypoint;
-        private int primary;
-        private DailyBean daily;
-        private MinutelyBean minutely;
+        public HourlyBean hourly;
+        public String forecast_keypoint;
+        public int primary;
+        public DailyBean daily;
+        public MinutelyBean minutely;
 
     }
 }
