@@ -2,7 +2,7 @@ package com.ym.quickrun.di.module;
 
 
 import android.app.Activity;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 
 import com.ym.quickrun.di.scope.FragmentScope;
 

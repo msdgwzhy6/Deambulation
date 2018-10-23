@@ -10,6 +10,9 @@ import com.ym.quickrun.base.BaseFragment;
  */
 public class HomeFragment extends BaseFragment {
 
+    public static HomeFragment newInstance() {
+        return new HomeFragment();
+    }
 
     @Override
     protected void initData() {

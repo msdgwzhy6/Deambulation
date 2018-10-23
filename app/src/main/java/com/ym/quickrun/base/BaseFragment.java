@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.trello.rxlifecycle2.components.RxFragment;
+import com.trello.rxlifecycle2.components.support.RxFragment;
 import com.ym.quickrun.QuickRunApplication;
 import com.ym.quickrun.R;
 import com.ym.quickrun.di.component.DaggerFragmentComponent;
@@ -22,7 +22,6 @@ import com.ym.quickrun.di.module.FragmentModule;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -43,11 +42,8 @@ public abstract class BaseFragment<T extends BaseContract.BasePresenter> extends
     protected boolean isVisible;
     private Unbinder mUnbinder;
 
-    @BindView(R.id.refresh)
     protected SwipeRefreshLayout mRefreshLayout;
-    @BindView(R.id.recycler)
     protected RecyclerView mRecycler;
-    @BindView(R.id.em_error)
     protected ConstraintLayout mError;
 
 
@@ -79,6 +75,9 @@ public abstract class BaseFragment<T extends BaseContract.BasePresenter> extends
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mUnbinder = ButterKnife.bind(this, view);
+        mRecycler = mActivity.findViewById(R.id.recycler);
+        mRefreshLayout = mActivity.findViewById(R.id.refresh);
+        mError = mActivity.findViewById(R.id.em_error);
         initInject();
         initPresenter();
         initWidget();

@@ -23,7 +23,6 @@ import com.ym.quickrun.widget.ProgressWheel;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -38,15 +37,10 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
     protected Context mContext;
 
     protected boolean mBack = true;
-    @BindView(R.id.toolbar)
     protected Toolbar mToolbar;
-    @BindView(R.id.pw_loading)
     protected ProgressWheel mLoading;
-    @BindView(R.id.refresh)
     protected SwipeRefreshLayout mRefreshLayout;
-    @BindView(R.id.recycler)
     protected RecyclerView mRecycler;
-    @BindView(R.id.em_error)
     public ConstraintLayout mError;
 
     @Override
@@ -55,6 +49,12 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
         setContentView(getLayoutId());
         mContext = this;
         ButterKnife.bind(this);
+        mToolbar = this.findViewById(R.id.toolbar);
+        mLoading = this.findViewById(R.id.pw_loading);
+        mRecycler = this.findViewById(R.id.recycler);
+        mRefreshLayout = this.findViewById(R.id.refresh);
+        mError = this.findViewById(R.id.em_error);
+
         initStatusBar();
         initInject();
         initPresenter();
