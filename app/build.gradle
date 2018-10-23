@@ -26,7 +26,7 @@ android {
 
         ndk {
             //设置支持的SO库架构
-            abiFilters 'armeabi'
+            abiFilters 'armeabi', 'arm64-v8a', 'x86_64', 'x86', 'armeabi-v7a'
         }
     }
 
@@ -37,9 +37,6 @@ android {
             storePassword "6866208"
             keyAlias "qr"
             keyPassword "6866208"
-        }
-
-        debug {
         }
     }
 
@@ -116,4 +113,7 @@ dependencies {
     implementation 'com.meituan.android.walle:library:1.1.6'
     //LayoutManagerGroup
     implementation 'com.github.DingMouRen:LayoutManagerGroup:1e6f4f96eb'
+    //leakcanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
 }

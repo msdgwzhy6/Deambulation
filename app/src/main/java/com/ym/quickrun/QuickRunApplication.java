@@ -3,6 +3,7 @@ package com.ym.quickrun;
 import android.app.Activity;
 import android.app.Application;
 
+import com.squareup.leakcanary.LeakCanary;
 import com.ym.quickrun.di.component.ApiComponent;
 import com.ym.quickrun.di.component.DaggerApiComponent;
 import com.ym.quickrun.di.module.ApiModule;
@@ -64,7 +65,7 @@ public class QuickRunApplication extends Application {
         mContext = this;
         initComponent();
         initCrashHandler();
-
+        LeakCanary.install(this);
     }
 
     /**
