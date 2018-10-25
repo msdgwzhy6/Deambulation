@@ -123,12 +123,16 @@ public abstract class BaseFragment<T extends BaseContract.BasePresenter> extends
     /**
      * 数据加载
      */
-    protected abstract void initData();
+    public void initData() {
+
+    }
 
     /**
      * 控件初始化
      */
-    protected abstract void initWidget();
+    public void initWidget() {
+
+    }
 
     protected void initPresenter() {
         if (mPresenter != null) {

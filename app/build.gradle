@@ -113,6 +113,9 @@ dependencies {
     implementation 'com.meituan.android.walle:library:1.1.6'
     //LayoutManagerGroup
     implementation 'com.github.DingMouRen:LayoutManagerGroup:1e6f4f96eb'
+    //Flycotablayout
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.github.hymanme.tagflowlayout:tagflowlayout:0.2.2'
     //leakcanary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
