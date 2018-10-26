@@ -3,6 +3,7 @@ package com.ym.quickrun.widget;
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
@@ -10,6 +11,9 @@ import android.util.AttributeSet;
  * desc: 重写Viewpager解决点击tab去除滑动动画效果的问题
  */
 public class NoScrollViewPager extends ViewPager {
+
+    private boolean isSlide = false;
+
     public NoScrollViewPager(Context context) {
         super(context);
     }
@@ -26,11 +30,28 @@ public class NoScrollViewPager extends ViewPager {
 
     @Override
     public void setCurrentItem(int item) {
-        super.setCurrentItem(item,false);
+        super.setCurrentItem(item, false);
     }
 
     @Override
     public void setCurrentItem(int item, boolean smoothScroll) {
         super.setCurrentItem(item, smoothScroll);
+    }
+
+
+    //禁止ViewPager左右滑动
+
+    public void setSlide(boolean slide) {
+        isSlide = slide;
+    }
+
+    @Override
+    public boolean onInterceptHoverEvent(MotionEvent event) {
+        return isSlide;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        return isSlide;
     }
 }

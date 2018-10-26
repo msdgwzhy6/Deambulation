@@ -1,10 +1,10 @@
 package com.ym.quickrun.model.app;
 
-import com.flyco.tablayout.SlidingTabLayout;
+import android.support.design.widget.BottomNavigationView;
+
 import com.ym.quickrun.R;
 import com.ym.quickrun.adapter.MainAdapter;
 import com.ym.quickrun.base.BaseFragment;
-import com.ym.quickrun.widget.NoScrollViewPager;
 
 import butterknife.BindView;
 
@@ -15,10 +15,8 @@ import butterknife.BindView;
  */
 public class HomeFragment extends BaseFragment {
 
-    @BindView(R.id.tab_layout)
-    SlidingTabLayout mTabLayout;
-    @BindView(R.id.view_pager)
-    NoScrollViewPager mViewPager;
+    @BindView(R.id.bottom_navigation)
+    BottomNavigationView navigation;
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -38,10 +36,6 @@ public class HomeFragment extends BaseFragment {
 
     private void initViewPager() {
         MainAdapter adapter = new MainAdapter(getChildFragmentManager());
-        mViewPager.setOffscreenPageLimit(3);
-        mViewPager.setAdapter(adapter);
-        mTabLayout.setViewPager(mViewPager);
-        mViewPager.setCurrentItem(1);
     }
 
 
