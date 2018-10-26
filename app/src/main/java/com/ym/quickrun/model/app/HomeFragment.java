@@ -3,7 +3,6 @@ package com.ym.quickrun.model.app;
 import android.support.design.widget.BottomNavigationView;
 
 import com.ym.quickrun.R;
-import com.ym.quickrun.adapter.MainAdapter;
 import com.ym.quickrun.base.BaseFragment;
 
 import butterknife.BindView;
@@ -35,7 +34,6 @@ public class HomeFragment extends BaseFragment {
     }
 
     private void initViewPager() {
-        MainAdapter adapter = new MainAdapter(getChildFragmentManager());
     }
 
 

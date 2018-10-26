@@ -2,7 +2,7 @@
 <resources>
     <string-array name="main_title">
         <item>运动</item>
-        <item>天气</item>
-        <item>发现</item>
+        <item>要闻</item>
+        <item>创业资讯</item>
     </string-array>
 </resources>
