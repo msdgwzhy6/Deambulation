@@ -7,4 +7,9 @@
     <string name="navigation_item_theme">主题选择</string>
     <string name="navigation_item_setting">设置与帮助</string>
     <string name="navigation_itm_about">关于</string>
+    
+    <!--底部按钮信息-->
+    <string name="bottom_run">运动</string>
+    <string name="bottom_discovery">发现</string>
+    <string name="bottom_me">我</string>
 </resources>
