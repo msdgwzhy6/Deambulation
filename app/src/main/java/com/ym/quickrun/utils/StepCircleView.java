@@ -60,6 +60,7 @@ public class StepCircleView extends View {
         isShowSelect = array.getBoolean(R.styleable.StepCircleView_is_show_select, false);
         mSelectRing = array.getInt(R.styleable.StepCircleView_ring_color_select, 0);
         array.recycle();
+
     }
 
 
