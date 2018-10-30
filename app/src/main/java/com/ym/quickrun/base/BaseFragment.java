@@ -190,4 +190,5 @@ public abstract class BaseFragment<T extends BaseContract.BasePresenter> extends
     public FragmentActivity getSupportActivity() {
         return (FragmentActivity) super.getActivity();
     }
+
 }
