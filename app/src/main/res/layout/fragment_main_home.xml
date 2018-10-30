@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:background="@drawable/pic_personal_background"
     android:layout_height="match_parent">
 
+
+    <com.ym.quickrun.utils.StepCircleView
+        android:id="@+id/stepview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:is_show_select="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:min_circle_radio="200"
+        app:ring_color_select="8"
+        app:ring_width="10"/>
 
 
 </android.support.constraint.ConstraintLayout>

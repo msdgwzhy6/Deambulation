@@ -1,17 +1,19 @@
 package com.ym.quickrun.model.app;
 
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
 
 import com.ym.quickrun.R;
 import com.ym.quickrun.base.BaseActivity;
-import com.ym.quickrun.utils.AppUtils;
 import com.ym.quickrun.utils.StatusBarUtil;
 import com.ym.quickrun.utils.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
 
 /**
  * @author ym
@@ -27,6 +29,8 @@ public class MainActivity extends BaseActivity {
 //    //单次步伐传感器
 //    private SensorEventListener stepCounterListener;
 
+    @BindView(R.id.bottom_navigation)
+    BottomNavigationView mNavigationView;
     long exitTime = 0L;
     private int mCurrentPos = -1;
     private List<Fragment> mFragments = new ArrayList<>();
@@ -42,8 +46,8 @@ public class MainActivity extends BaseActivity {
 //        //获取传感器系统服务
 //        assert sensorManager != null;
 //        stepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-
-        StatusBarUtil.setColorNoTranslucent(this, AppUtils.getColor(R.color.colorPrimary));
+        //设置透明
+        StatusBarUtil.setTransparentForWindow(this);
 
     }
 
@@ -114,4 +118,5 @@ public class MainActivity extends BaseActivity {
         }
         return false;
     }
+
 }

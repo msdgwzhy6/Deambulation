@@ -68,7 +68,7 @@ public class StepCircleView extends View {
         this.setWillNotDraw(false);
         color[0] = Color.parseColor("#8EE484");
         color[1] = Color.parseColor("#97C0EF");
-        color[3] = Color.parseColor("#8EE484");
+        color[2] = Color.parseColor("#8EE484");
     }
 
     @Override
@@ -88,9 +88,6 @@ public class StepCircleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if (isShowSelect && mSelectRing > mSelect) {
-            return;
-        }
 
         mPaint.setColor(mMaxCircleColor);
         canvas.drawCircle(mViewCenterX, mViewCenterY, mMinRadio + mRingWidth + 20, mPaint);
@@ -109,8 +106,9 @@ public class StepCircleView extends View {
         ringNormalPaint.setStrokeWidth(mRingWidth);
         ringNormalPaint.setColor(mRingNormalColor);
         canvas.drawArc(mRectF, 270, 360, false, ringNormalPaint);
-        ;
-        if (!isShowSelect) return;
+        if (!isShowSelect) {
+            return;
+        }
         ringNormalPaint.setColor(mMaxCircleColor);
         for (int i = 0; i < mSelect; i++) {
             canvas.drawArc(mRectF, 270 + (i * mRingAngleWidth + (i) * mSelectAngle), mSelectAngle, false, ringNormalPaint);
