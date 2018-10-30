@@ -74,7 +74,6 @@ public class MainActivity extends BaseActivity {
 //        };
     }
 
-
 //    private void registerSensor() {
 //        //注册传感器事件监听器
 //        if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_STEP_COUNTER)) {
