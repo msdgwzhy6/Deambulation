@@ -11,7 +11,6 @@ import com.ym.quickrun.utils.StatusBarUtil;
 import com.ym.quickrun.utils.ToastUtils;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -19,7 +18,7 @@ import java.util.List;
  * created at 2018/8/23 14:57
  * desc:
  */
-public class MainActivity extends BaseActivity{
+public class MainActivity extends BaseActivity {
 
 //    @BindView(R.id.StepCounter)
 //    TextView stepCounterText;
@@ -51,7 +50,13 @@ public class MainActivity extends BaseActivity{
 
     @Override
     protected void initData() {
-        mFragments = Collections.singletonList(HomeFragment.newInstance());
+        // 首页
+        mFragments.add(HomeFragment.newInstance());
+        // 发现
+        //mFragments.add(DiscoveryFragment.newInstance());
+        // 我的中心
+        //mFragments.add(MyCenterFragment.newInstance());
+
         //初始化位置
         switchFragmentIndex(0);
 //        stepCounterListener = new SensorEventListener() {
