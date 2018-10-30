@@ -55,7 +55,7 @@ public class MainActivity extends BaseActivity {
         // 发现
         //mFragments.add(DiscoveryFragment.newInstance());
         // 我的中心
-        //mFragments.add(MyCenterFragment.newInstance());
+        //mFragments.add(MineFragment.newInstance());
 
         //初始化位置
         switchFragmentIndex(0);
