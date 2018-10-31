@@ -21,7 +21,7 @@ import com.ym.quickrun.R;
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
  * date: 2018/9/19
- * desc: 圆形头像
+ * desc: 圆形Vie
  */
 public class CircleImageView extends ImageView {
 

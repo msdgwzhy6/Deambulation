@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 
 import com.ym.quickrun.R;
 import com.ym.quickrun.base.BaseActivity;
+import com.ym.quickrun.utils.AppUtils;
 import com.ym.quickrun.utils.StatusBarUtil;
 import com.ym.quickrun.utils.ToastUtils;
 
@@ -47,7 +48,7 @@ public class MainActivity extends BaseActivity {
 //        assert sensorManager != null;
 //        stepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
         //设置透明
-        StatusBarUtil.setTransparentForWindow(this);
+        StatusBarUtil.setColorNoTranslucent(this, AppUtils.getColor(R.color.colorPrimary));
 
     }
 
