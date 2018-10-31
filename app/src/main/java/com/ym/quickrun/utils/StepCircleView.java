@@ -56,7 +56,7 @@ public class StepCircleView extends View {
         mSelect = array.getInteger(R.styleable.StepCircleView_select, 7);
         mSelectAngle = array.getInteger(R.styleable.StepCircleView_selec_angle, 3);
 
-        mMinCircleColor = array.getColor(R.styleable.StepCircleView_circle_color, context.getResources().getColor(R.color.white));
+        mMinCircleColor = array.getColor(R.styleable.StepCircleView_circle_color, context.getResources().getColor(R.color.gray2));
         mMaxCircleColor = array.getColor(R.styleable.StepCircleView_circle_color, context.getResources().getColor(R.color.gray1));
         mRingNormalColor = array.getColor(R.styleable.StepCircleView_ring_normal_color, context.getResources().getColor(R.color.gray2));
 
