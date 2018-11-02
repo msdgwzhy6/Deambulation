@@ -9,13 +9,13 @@
 
     <include layout="@layout/layout_toolbar"/>
 
-    <com.ym.quickrun.view.CircleImageView
+    <com.ym.lightRunning.view.CircleImageView
         android:id="@+id/image"
         android:layout_width="@dimen/dp240"
         android:layout_height="@dimen/dp240"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/dp20"
-        app:border_color="@color/green_1"
+        app:border_color="@color/colorPrimary"
         app:border_width="@dimen/dp1"/>
 
 

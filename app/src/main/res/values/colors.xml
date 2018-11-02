@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#fb7299</color>
+    <color name="colorPrimary">#010312</color>
     <color name="colorPrimaryDark">#fb7299</color>
     <color name="colorAccent">#FF4081</color>
     <color name="yellow_50">#FFD11B</color>
@@ -43,6 +43,4 @@
     <color name="pink">#fb7299</color>
     <color name="pink_dark">#b85671</color>
     <color name="pink_trans">#99f0486c</color>
-
-    <color name="green_1">#8EE484</color>
 </resources>

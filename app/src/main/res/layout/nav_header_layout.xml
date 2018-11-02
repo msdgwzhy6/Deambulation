@@ -10,7 +10,7 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
 
-    <com.ym.quickrun.view.CircleImageView
+    <com.ym.lightRunning.view.CircleImageView
         android:id="@+id/ic_user_icon"
         android:layout_width="@dimen/dp74"
         android:layout_height="@dimen/dp74"
