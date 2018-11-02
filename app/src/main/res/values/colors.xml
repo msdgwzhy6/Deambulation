@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#010312</color>
+
+    <!--App主色调-->
+    <color name="colorPrimary">#FFFFFF</color>
+    <!--App字体主颜色-->
+    <color name="textColor">#151626</color>
+    <!--APP状态栏颜色-->
+    <color name="statusColor">#CCCCCC</color>
     <color name="colorPrimaryDark">#fb7299</color>
     <color name="colorAccent">#FF4081</color>
     <color name="yellow_50">#FFD11B</color>

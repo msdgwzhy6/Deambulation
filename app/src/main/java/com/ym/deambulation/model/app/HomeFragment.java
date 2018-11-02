@@ -1,6 +1,5 @@
 package com.ym.deambulation.model.app;
 
-import com.bumptech.glide.Glide;
 import com.ym.deambulation.R;
 import com.ym.deambulation.base.BaseFragment;
 import com.ym.deambulation.view.CircleImageView;
@@ -28,7 +27,7 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void initData() {
         super.initData();
-        Glide.with(this).load(R.drawable.img_slide_1).into(mImage);
+        //Glide.with(this).load(R.drawable.img_slide_1).into(mImage);
     }
 
     @Override

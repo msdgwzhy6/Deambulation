@@ -48,7 +48,7 @@ public class MainActivity extends BaseActivity {
 //        assert sensorManager != null;
 //        stepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
         //设置透明
-        StatusBarUtil.setColorNoTranslucent(this, AppUtils.getColor(R.color.colorPrimary));
+        StatusBarUtil.setColor(this, AppUtils.getColor(R.color.statusColor));
 
     }
 

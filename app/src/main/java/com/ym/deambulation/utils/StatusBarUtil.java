@@ -191,6 +191,9 @@ public class StatusBarUtil {
         addTranslucentView(activity, statusBarAlpha);
     }
 
+
+
+
     /**
      * 设置状态栏全透明
      *
