@@ -18,13 +18,22 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/ToolbarPopupTheme">
 
-            <TextView
-                android:id="@+id/toolbarTitle"
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_18"/>
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bottom_run"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18"/>
+
+
+            </RelativeLayout>
+
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 </LinearLayout>

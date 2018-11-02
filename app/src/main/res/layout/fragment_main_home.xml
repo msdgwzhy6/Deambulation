@@ -9,7 +9,7 @@
 
     <include layout="@layout/layout_toolbar"/>
 
-    <com.ym.lightRunning.view.CircleImageView
+    <com.ym.deambulation.view.CircleImageView
         android:id="@+id/image"
         android:layout_width="@dimen/dp240"
         android:layout_height="@dimen/dp240"

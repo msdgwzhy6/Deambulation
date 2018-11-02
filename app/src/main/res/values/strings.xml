@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">QuickRun</string>
+    <string name="app_name">Deambulation</string>
     <string name="app_introduce">每天快运动</string>
-    
+
     <!--底部按钮信息-->
     <string name="bottom_run">运动</string>
     <string name="bottom_discovery">发现</string>
