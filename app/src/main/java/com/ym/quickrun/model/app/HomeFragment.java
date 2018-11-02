@@ -25,10 +25,6 @@ public class HomeFragment extends BaseFragment {
         return new HomeFragment();
     }
 
-    @Override
-    public void initData() {
-        super.initData();
-    }
 
     @Override
     public int getLayoutId() {
