@@ -46,7 +46,8 @@ public class MainActivity extends BaseActivity {
 //        //获取传感器系统服务
 //        assert sensorManager != null;
 //        stepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        StatusBarUtil.setTranslucentDiff(this);
+        //设置透明
+        StatusBarUtil.setTransparent(this);
     }
 
 

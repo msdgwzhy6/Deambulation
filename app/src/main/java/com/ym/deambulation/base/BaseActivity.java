@@ -60,7 +60,6 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
         initPresenter();
         DeambulationApplication.getInstance().addActivity(this);
         if (mToolbar != null) {
-            initToolbar();
             setSupportActionBar(mToolbar);
             if (mBack) {
                 mToolbar.setNavigationOnClickListener(v -> finish());
@@ -75,7 +74,7 @@ public abstract class BaseActivity<T extends BaseContract.BasePresenter> extends
      */
     protected void initToolbar() {
         if (mBack) {
-            mToolbar.setNavigationIcon(R.drawable.ic_clip_back_white);
+            mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         }
     }
 

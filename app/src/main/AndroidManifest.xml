@@ -38,6 +38,7 @@
         <activity
             android:name=".model.app.MainActivity"
             android:launchMode="singleTask"
+            android:theme="@style/BaseAppTheme"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".model.app.SplashActivity"
