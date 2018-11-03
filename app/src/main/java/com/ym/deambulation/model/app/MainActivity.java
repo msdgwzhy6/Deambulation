@@ -7,7 +7,6 @@ import android.view.KeyEvent;
 
 import com.ym.deambulation.R;
 import com.ym.deambulation.base.BaseActivity;
-import com.ym.deambulation.utils.AppUtils;
 import com.ym.deambulation.utils.StatusBarUtil;
 import com.ym.deambulation.utils.ToastUtils;
 
@@ -47,9 +46,7 @@ public class MainActivity extends BaseActivity {
 //        //获取传感器系统服务
 //        assert sensorManager != null;
 //        stepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        //设置透明
-        StatusBarUtil.setColor(this, AppUtils.getColor(R.color.statusColor));
-
+        StatusBarUtil.setTranslucentDiff(this);
     }
 
 

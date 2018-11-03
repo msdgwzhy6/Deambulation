@@ -1,8 +1,6 @@
 package com.ym.deambulation.model.app;
 
 import android.content.Intent;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -27,17 +25,12 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        // 隐藏标题栏
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         return R.layout.activity_start;
     }
 
     @Override
     protected void initWidget() {
         super.initWidget();
-        // 隐藏状态栏
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //设置透明
         StatusBarUtil.setTransparent(this);
     }
