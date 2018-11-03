@@ -62,6 +62,7 @@ public class MainActivity extends BaseActivity {
 
         //初始化位置
         switchFragmentIndex(0);
+
 //        stepCounterListener = new SensorEventListener() {
 //            @Override
 //            public void onSensorChanged(SensorEvent event) {
