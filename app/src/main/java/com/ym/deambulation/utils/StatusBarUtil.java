@@ -67,6 +67,7 @@ public class StatusBarUtil {
         }
     }
 
+
     /**
      * 为滑动返回界面设置状态栏颜色
      *
@@ -380,7 +381,6 @@ public class StatusBarUtil {
         statusBarView.setId(FAKE_STATUS_BAR_VIEW_ID);
         return statusBarView;
     }
-
     /**
      * 设置根布局参数
      */
