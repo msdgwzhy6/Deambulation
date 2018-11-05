@@ -192,8 +192,6 @@ public class StatusBarUtil {
     }
 
 
-
-
     /**
      * 设置状态栏全透明
      *

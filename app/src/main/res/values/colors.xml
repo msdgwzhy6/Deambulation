@@ -49,4 +49,8 @@
     <color name="pink">#fb7299</color>
     <color name="pink_dark">#b85671</color>
     <color name="pink_trans">#99f0486c</color>
+
+
+    <color name="toolbar_end_color">#f5a14c</color>
+    <color name="toolbar_start_color">#ff4b57</color>
 </resources>
