@@ -3,9 +3,9 @@
           package="com.ym.deambulation">
 
     <!--允许联网 -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <!--用于进行网络定位-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <!--用于访问GPS定位-->
@@ -38,8 +38,8 @@
         <activity
             android:name=".model.app.MainActivity"
             android:launchMode="singleTask"
-            android:theme="@style/BaseAppTheme"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme"/>
         <activity
             android:name=".model.app.SplashActivity"
             android:launchMode="singleTask"
@@ -50,9 +50,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".model.app.share.ContentShareActivity"/>
+
+
         <service android:name=".widget.NetworkService"/>
 
-        <meta-data android:name="com.amap.api.v2.apikey" android:value="开发者申请的key"/>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="开发者申请的key"/>
     </application>
 
 </manifest>

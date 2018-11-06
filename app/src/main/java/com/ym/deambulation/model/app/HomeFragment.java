@@ -1,7 +1,10 @@
 package com.ym.deambulation.model.app;
 
+import android.support.v7.widget.Toolbar;
+
 import com.ym.deambulation.R;
 import com.ym.deambulation.base.BaseFragment;
+import com.ym.deambulation.utils.StatusBarUtil;
 import com.ym.deambulation.view.CircleImageView;
 
 import butterknife.BindView;
@@ -14,6 +17,8 @@ import butterknife.BindView;
 public class HomeFragment extends BaseFragment {
     @BindView(R.id.image)
     CircleImageView mImage;
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -27,7 +32,10 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void initData() {
         super.initData();
-        //Glide.with(this).load(R.drawable.img_slide_1).into(mImage);
+
+        //设置透明
+        StatusBarUtil.setTransparentForImageView(getActivity(), mToolbar);
+
     }
 
     @Override

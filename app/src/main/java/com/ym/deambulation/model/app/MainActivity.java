@@ -3,7 +3,6 @@ package com.ym.deambulation.model.app;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 
 import com.ym.deambulation.R;
@@ -32,8 +31,7 @@ public class MainActivity extends BaseActivity {
 
     @BindView(R.id.bottom_navigation)
     BottomNavigationView mNavigationView;
-    @BindView(R.id.toolbar)
-    Toolbar mToolbar;
+
     long exitTime = 0L;
     private int mCurrentPos = -1;
     private List<Fragment> mFragments = new ArrayList<>();
@@ -49,9 +47,8 @@ public class MainActivity extends BaseActivity {
 //        //获取传感器系统服务
 //        assert sensorManager != null;
 //        stepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        //设置透明
-        StatusBarUtil.setTransparentForImageView(this, mToolbar);
-    }
+
+}
 
 
     @Override
