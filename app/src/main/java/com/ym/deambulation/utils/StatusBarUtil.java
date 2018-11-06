@@ -48,25 +48,37 @@ public class StatusBarUtil {
 
     public static void setColor(Activity activity, @ColorInt int color, @IntRange(from = 0, to = 255) int statusBarAlpha) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            //5.0以上版本
+
+            //设置FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS属性才能调用setStatusBarColor方法来设置状态栏颜色
             activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            //设置FLAG_TRANSLUCENT_STATUS透明状态栏
             activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            //根据输入的颜色和透明度显示
             activity.getWindow().setStatusBarColor(calculateStatusColor(color, statusBarAlpha));
+
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            //低版本
+
+            //添加透明状态栏
             activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            //获取顶级视图
             ViewGroup decorView = (ViewGroup) activity.getWindow().getDecorView();
+            //获取顶部的StatusBarView,自定义id
             View fakeStatusBarView = decorView.findViewById(FAKE_STATUS_BAR_VIEW_ID);
             if (fakeStatusBarView != null) {
                 if (fakeStatusBarView.getVisibility() == View.GONE) {
                     fakeStatusBarView.setVisibility(View.VISIBLE);
                 }
+                //设置顶层颜色
                 fakeStatusBarView.setBackgroundColor(calculateStatusColor(color, statusBarAlpha));
             } else {
+                //上述不符合，则创建一个View添加到顶级视图中
                 decorView.addView(createStatusBarView(activity, color, statusBarAlpha));
             }
             setRootView(activity);
         }
     }
-
 
     /**
      * 为滑动返回界面设置状态栏颜色
@@ -251,21 +263,48 @@ public class StatusBarUtil {
      */
     public static void setTranslucentForImageView(Activity activity, @IntRange(from = 0, to = 255) int statusBarAlpha,
                                                   View needOffsetView) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
-            return;
-        }
-        setTransparentForWindow(activity);
-        addTranslucentView(activity, statusBarAlpha);
-        if (needOffsetView != null) {
-            Object haveSetOffset = needOffsetView.getTag(TAG_KEY_HAVE_SET_OFFSET);
-            if (haveSetOffset != null && (Boolean) haveSetOffset) {
-                return;
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {
+            //5.0以上版本
+            setTransparentForWindow(activity);
+            addTranslucentView(activity, statusBarAlpha);
+            if (needOffsetView != null) {
+                Object haveSetOffset = needOffsetView.getTag(TAG_KEY_HAVE_SET_OFFSET);
+                if (haveSetOffset != null && (Boolean) haveSetOffset) {
+                    return;
+                }
+                ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) needOffsetView.getLayoutParams();
+                layoutParams.setMargins(layoutParams.leftMargin, layoutParams.topMargin + getStatusBarHeight(activity),
+                        layoutParams.rightMargin, layoutParams.bottomMargin);
+                needOffsetView.setTag(TAG_KEY_HAVE_SET_OFFSET, true);
             }
-            ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) needOffsetView.getLayoutParams();
-            layoutParams.setMargins(layoutParams.leftMargin, layoutParams.topMargin + getStatusBarHeight(activity),
-                    layoutParams.rightMargin, layoutParams.bottomMargin);
-            needOffsetView.setTag(TAG_KEY_HAVE_SET_OFFSET, true);
+        } else {
+            //低版本
+
+            //添加透明状态栏
+            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            //获取顶级视图
+            ViewGroup decorView = (ViewGroup) activity.getWindow().getDecorView();
+            //获取顶部的StatusBarView,自定义id
+            View fakeStatusBarView = decorView.findViewById(FAKE_STATUS_BAR_VIEW_ID);
+            if (fakeStatusBarView != null) {
+                if (fakeStatusBarView.getVisibility() == View.GONE) {
+                    fakeStatusBarView.setVisibility(View.VISIBLE);
+                }
+                //设置顶层颜色
+                fakeStatusBarView.setBackgroundResource(R.drawable.shape_gradient);
+            } else {
+                //上述不符合，则创建一个View添加到顶级视图中
+                View statusBarView = new View(activity);
+                LinearLayout.LayoutParams params =
+                        new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, getStatusBarHeight(activity));
+                statusBarView.setLayoutParams(params);
+                fakeStatusBarView.setBackgroundResource(R.drawable.shape_gradient);
+                statusBarView.setId(FAKE_STATUS_BAR_VIEW_ID);
+                decorView.addView(statusBarView);
+            }
+            setRootView(activity);
         }
+
     }
 
     /**
@@ -381,6 +420,7 @@ public class StatusBarUtil {
         statusBarView.setId(FAKE_STATUS_BAR_VIEW_ID);
         return statusBarView;
     }
+
     /**
      * 设置根布局参数
      */
