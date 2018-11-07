@@ -1,6 +1,7 @@
 package com.ym.deambulation.model.app;
 
 import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
 import com.ym.deambulation.R;
 import com.ym.deambulation.base.BaseFragment;
@@ -19,6 +20,8 @@ public class HomeFragment extends BaseFragment {
     CircleImageView mImage;
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
+    @BindView(R.id.main_title)
+    TextView mTitle;
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -32,10 +35,10 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void initData() {
         super.initData();
-
         //设置透明
         StatusBarUtil.setTransparentForImageView(getActivity(), mToolbar);
 
+        mTitle.setText(R.string.main_toolbar_title_top);
     }
 
     @Override
