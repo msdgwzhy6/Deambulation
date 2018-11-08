@@ -16,7 +16,9 @@ import android.widget.LinearLayout;
 import com.ym.deambulation.R;
 
 /**
- * Created by Jaeger on 16/2/14.
+ *
+ * @author Jaeger
+ * @date 16/2/14
  * <p>
  * Email: chjie.jaeger@gmail.com
  * GitHub: https://github.com/laobie
