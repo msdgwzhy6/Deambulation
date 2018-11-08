@@ -7,7 +7,6 @@ import android.view.KeyEvent;
 
 import com.ym.deambulation.R;
 import com.ym.deambulation.base.BaseActivity;
-import com.ym.deambulation.utils.StatusBarUtil;
 import com.ym.deambulation.utils.ToastUtils;
 
 import java.util.ArrayList;
@@ -47,7 +46,6 @@ public class MainActivity extends BaseActivity {
 //        //获取传感器系统服务
 //        assert sensorManager != null;
 //        stepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-
 }
 
 
@@ -55,11 +53,6 @@ public class MainActivity extends BaseActivity {
     protected void initData() {
         // 首页
         mFragments.add(HomeFragment.newInstance());
-        // 发现
-        //mFragments.add(DiscoveryFragment.newInstance());
-        // 我的中心
-        //mFragments.add(MineFragment.newInstance());
-
         //初始化位置
         switchFragmentIndex(0);
 
