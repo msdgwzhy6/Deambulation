@@ -85,6 +85,7 @@ public class MainActivity extends BaseActivity {
 //        }
 //    }
 
+
     private void switchFragmentIndex(int pos) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         if (mCurrentPos != -1) {
