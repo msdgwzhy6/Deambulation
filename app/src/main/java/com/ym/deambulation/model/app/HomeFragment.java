@@ -6,6 +6,7 @@ import android.widget.TextView;
 import com.ym.deambulation.R;
 import com.ym.deambulation.base.BaseFragment;
 import com.ym.deambulation.utils.StatusBarUtil;
+import com.ym.deambulation.utils.StepUtils;
 import com.ym.deambulation.view.CircleImageView;
 
 import butterknife.BindView;
@@ -16,6 +17,7 @@ import butterknife.BindView;
  * desc: 首页Fragment
  */
 public class HomeFragment extends BaseFragment {
+
     @BindView(R.id.image)
     CircleImageView mImage;
     @BindView(R.id.toolbar)
@@ -37,7 +39,7 @@ public class HomeFragment extends BaseFragment {
         super.initData();
         //设置透明
         StatusBarUtil.setTransparentForImageView(getActivity(), mToolbar);
-
+        StepUtils.init(getActivity());
         mTitle.setText(R.string.main_toolbar_title_top);
     }
 
@@ -45,4 +47,9 @@ public class HomeFragment extends BaseFragment {
     public void showError(String msg) {
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        StepUtils.unregisterSensor();
+    }
 }

@@ -17,12 +17,11 @@ import static android.content.Context.SENSOR_SERVICE;
  */
 public class StepUtils implements SensorEventListener {
     private static Context mContext;
-    private static SensorManager sensorManager;
-    private static Sensor stepCounter;
-    private static SensorEventListener stepCounterListener;
+    private SensorManager sensorManager;
+    private Sensor stepCounter;
 
 
-    public static void init(Context context) {
+    public void init(Context context) {
         mContext = context;
         sensorManager = (SensorManager) mContext.getSystemService(SENSOR_SERVICE);
         //获取传感器系统服务
@@ -31,17 +30,17 @@ public class StepUtils implements SensorEventListener {
         registerSensor();
     }
 
-    public static void registerSensor() {
+    public void registerSensor() {
         //注册传感器事件监听器
         if (mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_STEP_COUNTER)) {
-            sensorManager.registerListener(stepCounterListener, stepCounter, SensorManager.SENSOR_DELAY_FASTEST);
+            sensorManager.registerListener(this, stepCounter, SensorManager.SENSOR_DELAY_FASTEST);
         }
     }
 
-    public static void unregisterSensor() {
+    public void unregisterSensor() {
         //解注册传感器事件监听器
         if (mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_STEP_COUNTER)) {
-            sensorManager.unregisterListener(stepCounterListener);
+            sensorManager.unregisterListener(this);
         }
     }
 
