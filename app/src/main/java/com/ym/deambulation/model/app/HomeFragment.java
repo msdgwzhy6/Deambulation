@@ -1,5 +1,8 @@
 package com.ym.deambulation.model.app;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
@@ -16,7 +19,7 @@ import butterknife.BindView;
  * date: 2018/9/21
  * desc: 首页Fragment
  */
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements SensorEventListener {
 
     @BindView(R.id.image)
     CircleImageView mImage;
@@ -39,12 +42,24 @@ public class HomeFragment extends BaseFragment {
         super.initData();
         //设置透明
         StatusBarUtil.setTransparentForImageView(getActivity(), mToolbar);
-        StepUtils.init(getActivity());
+        //绑定计步器
+        StepUtils.init(getActivity(), this);
         mTitle.setText(R.string.main_toolbar_title_top);
     }
 
     @Override
     public void showError(String msg) {
+    }
+
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
     }
 
     @Override
