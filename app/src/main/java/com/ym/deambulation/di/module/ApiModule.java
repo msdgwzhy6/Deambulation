@@ -2,11 +2,11 @@ package com.ym.deambulation.di.module;
 
 import com.ym.deambulation.di.qualifier.AppUrl;
 import com.ym.deambulation.di.qualifier.WeatherUrl;
-import com.ym.deambulation.network.api.ApiService;
-import com.ym.deambulation.network.api.WeatherService;
-import com.ym.deambulation.network.helper.OkHttpHelper;
-import com.ym.deambulation.network.helper.RetrofitHelper;
-import com.ym.deambulation.network.support.ApiConstants;
+import com.ym.deambulation.utils.network.api.ApiService;
+import com.ym.deambulation.utils.network.api.WeatherService;
+import com.ym.deambulation.utils.network.helper.OkHttpHelper;
+import com.ym.deambulation.utils.network.helper.RetrofitHelper;
+import com.ym.deambulation.utils.network.support.ApiConstants;
 
 import javax.inject.Singleton;
 

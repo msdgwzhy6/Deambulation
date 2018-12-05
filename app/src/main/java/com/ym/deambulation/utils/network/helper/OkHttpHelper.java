@@ -1,4 +1,4 @@
-package com.ym.deambulation.network.helper;
+package com.ym.deambulation.utils.network.helper;
 
 import java.util.concurrent.TimeUnit;
 

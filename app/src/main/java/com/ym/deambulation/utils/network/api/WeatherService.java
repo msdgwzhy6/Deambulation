@@ -1,4 +1,4 @@
-package com.ym.deambulation.network.api;
+package com.ym.deambulation.utils.network.api;
 
 import com.ym.deambulation.bean.FutureWeatherBean;
 import com.ym.deambulation.bean.LocalWeatherBean;

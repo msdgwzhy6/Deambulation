@@ -2,7 +2,7 @@ package com.ym.deambulation.base;
 
 import android.text.TextUtils;
 
-import com.ym.deambulation.network.exception.ApiException;
+import com.ym.deambulation.utils.network.exception.ApiException;
 import com.ym.deambulation.utils.AppUtils;
 import com.ym.deambulation.utils.LogUtils;
 import com.ym.deambulation.utils.NetworkUtils;

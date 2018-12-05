@@ -1,10 +1,10 @@
-package com.ym.deambulation.network.helper;
+package com.ym.deambulation.utils.network.helper;
 
 import com.ym.deambulation.DeambulationApplication;
 import com.ym.deambulation.bean.FutureWeatherBean;
 import com.ym.deambulation.bean.LocalWeatherBean;
-import com.ym.deambulation.network.api.ApiService;
-import com.ym.deambulation.network.api.WeatherService;
+import com.ym.deambulation.utils.network.api.ApiService;
+import com.ym.deambulation.utils.network.api.WeatherService;
 
 import io.reactivex.Flowable;
 

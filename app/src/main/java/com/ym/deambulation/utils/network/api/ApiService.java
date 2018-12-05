@@ -1,4 +1,4 @@
-package com.ym.deambulation.network.api;
+package com.ym.deambulation.utils.network.api;
 
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com

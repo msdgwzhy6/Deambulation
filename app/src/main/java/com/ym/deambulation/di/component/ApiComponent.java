@@ -1,7 +1,7 @@
 package com.ym.deambulation.di.component;
 
 import com.ym.deambulation.di.module.ApiModule;
-import com.ym.deambulation.network.helper.RetrofitHelper;
+import com.ym.deambulation.utils.network.helper.RetrofitHelper;
 
 import javax.inject.Singleton;
 
