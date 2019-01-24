@@ -32,6 +32,7 @@ public class HomeFragment extends BaseFragment implements SensorEventListener {
         return new HomeFragment();
     }
 
+
     @Override
     public int getLayoutId() {
         return R.layout.fragment_main_home;
