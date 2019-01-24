@@ -1,9 +1,6 @@
 package com.ym.deambulation.utils;
 
 import android.content.Context;
-import android.content.Intent;
-
-import com.ym.deambulation.model.app.SplashActivity;
 
 /**
  * @author: ym  作者 E-mail: 15622113269@163.com
@@ -54,10 +51,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
             //如果用户没有处理则让系统默认的异常处理器来处理
             mExceptionHandler.uncaughtException(t, e);
         } else {
-            //异常发生后的自定义操作
-            Intent intent = new Intent(mContext, SplashActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            mContext.startActivity(intent);
+            LogUtils.e(e.toString());
         }
     }
 

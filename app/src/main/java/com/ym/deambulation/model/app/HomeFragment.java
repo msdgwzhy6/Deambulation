@@ -41,9 +41,9 @@ public class HomeFragment extends BaseFragment implements SensorEventListener {
     public void initData() {
         super.initData();
         //设置透明
-        StatusBarUtil.setTransparentForImageView(mActivity, mToolbar);
-        //绑定计步器
-        StepUtils.init(getActivity(), this);
+        StatusBarUtil.setTransparentForWindow(mActivity, mToolbar);
+//        //绑定计步器
+//        StepUtils.init(getActivity(), this);
         mTitle.setText(R.string.main_toolbar_title_top);
     }
 

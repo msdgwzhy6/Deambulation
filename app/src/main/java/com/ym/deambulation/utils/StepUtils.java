@@ -30,7 +30,7 @@ public class StepUtils {
         registerSensor();
     }
 
-    public static void registerSensor() {
+    private static void registerSensor() {
         //注册传感器事件监听器
         if (mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_STEP_COUNTER)) {
             sensorManager.registerListener(stepCounterListener, stepCounter, SensorManager.SENSOR_DELAY_FASTEST);
